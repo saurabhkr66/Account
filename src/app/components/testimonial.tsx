@@ -1,42 +1,61 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight, Quote, Star, Sparkles, Award, Users, CheckCircle, Clock } from "lucide-react"
 
 const testimonials = [
   {
     id: 1,
-    text: "Accloud has solved a long pending problem in accounting. I never thought I could switch from Tally to something with a premium experience. I fell in love with Accloud from the first moment I used it. The way the side panels for ledgers and groups appear is just fantastic. It makes navigating and managing my accounts so much easier.",
+    text: "Switching to their accounting service was the best decision for our business. The precision and expertise they bring has transformed our financial management completely. Their modern approach combined with traditional values makes them stand out.",
     name: "Phani Kumar",
     title: "MD, Syndy Pharma",
     avatar: "/placeholder.svg?height=80&width=80",
     initials: "PK",
+    rating: 5,
+    company: "Pharmaceutical Industry",
   },
   {
     id: 2,
-    text: "The transition to Accloud was seamless and the customer support team guided us through every step. Our accounting processes are now 3x faster and more accurate. The intuitive interface makes complex accounting tasks feel simple.",
+    text: "The transition was seamless and the customer support team guided us through every step. Our accounting processes are now 3x faster and more accurate. The intuitive approach makes complex financial tasks feel effortless.",
     name: "Sarah Johnson",
     title: "CFO, TechCorp Solutions",
     avatar: "/placeholder.svg?height=80&width=80",
     initials: "SJ",
+    rating: 5,
+    company: "Technology Sector",
   },
   {
     id: 3,
-    text: "After using traditional accounting software for years, Accloud feels like a breath of fresh air. The modern interface and powerful features have transformed how we handle our finances. Highly recommend to any growing business.",
+    text: "After using traditional accounting services for years, this feels like a breath of fresh air. The modern approach and powerful insights have transformed how we handle our finances. Highly recommend to any growing business.",
     name: "Michael Chen",
     title: "Founder, GrowthLab",
     avatar: "/placeholder.svg?height=80&width=80",
     initials: "MC",
+    rating: 5,
+    company: "Startup Ecosystem",
   },
   {
     id: 4,
-    text: "Accloud's reporting capabilities are outstanding. We can generate comprehensive financial reports in minutes instead of hours. The real-time insights have helped us make better business decisions and improve our cash flow management.",
+    text: "Their reporting capabilities are outstanding. We can get comprehensive financial insights in minutes instead of hours. The real-time analysis has helped us make better business decisions and improve our cash flow significantly.",
     name: "Emily Rodriguez",
     title: "Finance Director, InnovateCo",
     avatar: "/placeholder.svg?height=80&width=80",
     initials: "ER",
+    rating: 5,
+    company: "Innovation Hub",
+  },
+  {
+    id: 5,
+    text: "Professional, reliable, and incredibly efficient. Their team's expertise in tax compliance and financial planning has saved us countless hours and significant costs. The peace of mind they provide is invaluable.",
+    name: "David Thompson",
+    title: "CEO, BuildRight Construction",
+    avatar: "/placeholder.svg?height=80&width=80",
+    initials: "DT",
+    rating: 5,
+    company: "Construction Industry",
   },
 ]
 
@@ -48,7 +67,7 @@ export default function Testimonial() {
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext()
-    }, 6000)
+    }, 8000)
 
     return () => clearInterval(interval)
   }, [currentIndex])
@@ -59,7 +78,7 @@ export default function Testimonial() {
     setTimeout(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length)
       setIsAnimating(false)
-    }, 300)
+    }, 400)
   }
 
   const handlePrev = () => {
@@ -68,118 +87,253 @@ export default function Testimonial() {
     setTimeout(() => {
       setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
       setIsAnimating(false)
-    }, 300)
+    }, 400)
   }
 
   const currentTestimonial = testimonials[currentIndex]
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 dark:from-black dark:via-black dark:to-black py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          {/* Testimonials Badge */}
-          <div className="inline-flex items-center px-6 py-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full border border-blue-200 dark:border-gray-700 mb-8">
-            <span className="text-blue-600 dark:text-blue-400 font-medium">Testimonials</span>
+    <section className="relative min-h-screen bg-gradient-to-br from-orange-50 via-rose-50 to-purple-50 py-24 px-4 overflow-hidden">
+      {/* Enhanced Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-emerald-200/40 to-teal-300/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-violet-200/40 to-purple-300/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-pink-200/35 to-rose-300/25 rounded-full blur-2xl animate-bounce" style={{ animationDuration: '4s' }}></div>
+        <div className="absolute top-1/3 right-1/3 w-48 h-48 bg-gradient-to-br from-cyan-200/35 to-blue-300/25 rounded-full blur-2xl animate-pulse delay-500"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-56 h-56 bg-gradient-to-br from-yellow-200/30 to-orange-300/20 rounded-full blur-3xl animate-pulse delay-300"></div>
+        
+        {/* Animated Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:80px_80px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-gradient-to-r from-emerald-400/60 via-cyan-400/60 to-blue-400/60 rounded-full animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 8}s`,
+              animationDuration: `${4 + Math.random() * 6}s`,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Enhanced Header Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
+        >
+          {/* Enhanced Badge */}
+          <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-emerald-100/80 to-cyan-100/80 border-2 border-emerald-200/50 backdrop-blur-sm rounded-full mb-10">
+            <Award className="w-5 h-5 text-emerald-600" />
+            <span className="text-emerald-700 font-semibold text-lg">Client Testimonials</span>
+            <Sparkles className="w-5 h-5 text-emerald-600" />
           </div>
 
-          {/* Main Heading */}
-          <div className="relative mb-6">
-            {/* Large decorative quote marks */}
-            <div className="absolute -left-8 -top-4 text-blue-200 dark:text-blue-900 text-8xl font-serif opacity-30 dark:opacity-20 select-none">"</div>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white">
-              Our <span className="text-blue-600 dark:text-blue-400">Success</span> Stories
+          {/* Enhanced Main Heading */}
+          <div className="relative mb-8">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 leading-tight">
+              Our <span className="bg-gradient-to-r from-emerald-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">Success</span> Stories
             </h1>
           </div>
 
-          {/* Subtitle */}
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Hear from those who've switched to Accloud
+          {/* Enhanced Subtitle */}
+          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Discover how we've transformed businesses with our expert accounting solutions and 
+            <span className="text-emerald-600 font-semibold"> exceptional service</span>
           </p>
-        </div>
+        </motion.div>
 
-        {/* Testimonial Card */}
+        {/* Enhanced Statistics Bar - Using the commented stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex justify-center items-center gap-8 mb-16 flex-wrap"
+        >
+          <motion.div
+            whileHover={{ scale: 1.05, y: -5 }}
+            className="text-center group"
+          >
+            <div className="relative">
+              <div className="absolute -inset-2 bg-gradient-to-r from-emerald-400 to-cyan-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-gray-200/50 group-hover:border-emerald-200/70 transition-all duration-300">
+                <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">500+</div>
+                <div className="text-sm text-gray-600 font-medium">Happy Clients</div>
+              </div>
+            </div>
+          </motion.div>
+          
+          <div className="w-px h-12 bg-gray-300"></div>
+          
+          <motion.div
+            whileHover={{ scale: 1.05, y: -5 }}
+            className="text-center group"
+          >
+            <div className="relative">
+              <div className="absolute -inset-2 bg-gradient-to-r from-pink-400 to-rose-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-gray-200/50 group-hover:border-pink-200/70 transition-all duration-300">
+                <div className="text-3xl font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">4.9/5</div>
+                <div className="text-sm text-gray-600 font-medium">Average Rating</div>
+              </div>
+            </div>
+          </motion.div>
+          
+          <div className="w-px h-12 bg-gray-300"></div>
+          
+          <motion.div
+            whileHover={{ scale: 1.05, y: -5 }}
+            className="text-center group"
+          >
+            <div className="relative">
+              <div className="absolute -inset-2 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-gray-200/50 group-hover:border-blue-200/70 transition-all duration-300">
+                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">99%</div>
+                <div className="text-sm text-gray-600 font-medium">Satisfaction Rate</div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Enhanced Testimonial Card */}
         <div className="relative">
-          {/* Navigation Arrows */}
+          {/* Enhanced Navigation Arrows */}
           <Button
             variant="ghost"
             size="icon"
             onClick={handlePrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-700 shadow-lg"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 h-14 w-14 rounded-full bg-white/80 backdrop-blur-sm border-2 border-gray-200/50 hover:bg-white/90 hover:border-emerald-200/70 shadow-lg group transition-all duration-300"
           >
-            <ChevronLeft className="h-6 w-6 text-gray-600 dark:text-gray-400" />
+            <ChevronLeft className="h-6 w-6 text-gray-600 group-hover:text-emerald-600 transition-colors duration-300" />
           </Button>
 
           <Button
             variant="ghost"
             size="icon"
             onClick={handleNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 h-12 w-12 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-700 shadow-lg"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 h-14 w-14 rounded-full bg-white/80 backdrop-blur-sm border-2 border-gray-200/50 hover:bg-white/90 hover:border-emerald-200/70 shadow-lg group transition-all duration-300"
           >
-            <ChevronRight className="h-6 w-6 text-gray-600 dark:text-gray-400" />
+            <ChevronRight className="h-6 w-6 text-gray-600 group-hover:text-emerald-600 transition-colors duration-300" />
           </Button>
 
-          {/* Main Testimonial Card */}
-          <div className="max-w-4xl mx-auto">
-            <div
-              // UPDATED LINE: Replaced border with a thick, semi-transparent ring for a highlighter effect.
-              className={`bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl ring-8 ring-blue-200/50 dark:ring-blue-800/50 transition-all duration-500 ease-in-out ${
-                isAnimating ? "opacity-0 transform scale-95" : "opacity-100 transform scale-100"
-              }`}
-            >
-              {/* Large background quote marks */}
-              <div className="absolute top-8 left-8 text-blue-100 dark:text-blue-900 text-6xl font-serif opacity-50 dark:opacity-20 select-none">"</div>
+          {/* Enhanced Main Testimonial Card */}
+          <div className="max-w-5xl mx-auto">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0, scale: 0.9, rotateY: -10 }}
+                animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+                exit={{ opacity: 0, scale: 0.9, rotateY: 10 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="relative"
+              >
+                {/* Glow Effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400 via-cyan-500 to-blue-500 rounded-3xl blur-xl opacity-20"></div>
+                
+                <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl border-2 border-gray-200/50 overflow-hidden">
+                  <div className="relative z-10">
+                    {/* Enhanced Customer Info */}
+                    <div className="flex items-center gap-8 mb-10">
+                      <div className="relative">
+                        <Avatar className="h-24 w-24 ring-4 ring-emerald-500/50 shadow-xl">
+                          <AvatarImage src={currentTestimonial.avatar || "/placeholder.svg"} alt={currentTestimonial.name} />
+                          <AvatarFallback className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white font-bold text-2xl">
+                            {currentTestimonial.initials}
+                          </AvatarFallback>
+                        </Avatar>
+                        {/* Verified Badge */}
+                        <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center border-2 border-white shadow-lg">
+                          <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                      </div>
+                      
+                      <div className="flex-1">
+                        <h3 className="text-3xl font-bold text-gray-800 mb-2">{currentTestimonial.name}</h3>
+                        <p className="text-emerald-600 text-xl font-medium mb-1">{currentTestimonial.title}</p>
+                        <p className="text-gray-500 text-lg">{currentTestimonial.company}</p>
+                        
+                        {/* Star Rating */}
+                        <div className="flex items-center gap-1 mt-3">
+                          {[...Array(currentTestimonial.rating)].map((_, i) => (
+                            <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                          ))}
+                          <span className="text-gray-500 ml-2 text-sm">Verified Review</span>
+                        </div>
+                      </div>
+                    </div>
 
-              <div className="relative z-10">
-                {/* Customer Info */}
-                <div className="flex items-center gap-6 mb-8">
-                  <Avatar className="h-20 w-20 ring-4 ring-blue-100 dark:ring-blue-900/50">
-                    <AvatarImage src={currentTestimonial.avatar || "/placeholder.svg"} alt={currentTestimonial.name} />
-                    <AvatarFallback className="bg-blue-500 dark:bg-blue-600 text-white font-bold text-xl">
-                      {currentTestimonial.initials}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-1">{currentTestimonial.name}</h3>
-                    <p className="text-gray-500 dark:text-gray-400 text-lg">{currentTestimonial.title}</p>
+                    {/* Enhanced Testimonial Text */}
+                    <blockquote className="text-gray-700 text-xl md:text-2xl leading-relaxed font-medium relative">
+                      <span className="text-emerald-500 text-6xl font-serif absolute -top-4 -left-2 opacity-50">"</span>
+                      <span className="relative z-10 block pl-8">
+                        {currentTestimonial.text}
+                      </span>
+                      <span className="text-cyan-500 text-6xl font-serif absolute -bottom-8 -right-2 opacity-50">"</span>
+                    </blockquote>
                   </div>
-                </div>
 
-                {/* Testimonial Text */}
-                <blockquote className="text-gray-700 dark:text-gray-300 text-lg md:text-xl leading-relaxed font-medium">
-                  {currentTestimonial.text}
-                </blockquote>
-              </div>
-            </div>
+                  {/* Decorative Elements */}
+                  <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-emerald-200/40 to-cyan-300/30 rounded-full blur-xl"></div>
+                  <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-br from-blue-200/40 to-indigo-300/30 rounded-full blur-lg"></div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
 
-          {/* Dot Indicators */}
-          <div className="flex justify-center gap-3 mt-12">
+          {/* Enhanced Dot Indicators */}
+          <div className="flex justify-center gap-4 mt-12">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => {
-                  if (!isAnimating) {
+                  if (!isAnimating && index !== currentIndex) {
                     setIsAnimating(true)
                     setTimeout(() => {
                       setCurrentIndex(index)
                       setIsAnimating(false)
-                    }, 300)
+                    }, 400)
                   }
                 }}
-                className={`h-3 w-3 rounded-full transition-all duration-300 ${
+                className={`relative h-4 w-4 rounded-full transition-all duration-500 ${
                   index === currentIndex 
-                    ? "bg-blue-500 dark:bg-blue-400 scale-125" 
-                    : "bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
+                    ? "bg-gradient-to-r from-emerald-500 to-cyan-500 scale-125 shadow-lg shadow-emerald-500/50" 
+                    : "bg-gray-400 hover:bg-gray-500 hover:scale-110"
                 }`}
-              />
+              >
+                {index === currentIndex && (
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 animate-ping opacity-20"></div>
+                )}
+              </button>
             ))}
           </div>
         </div>
-
-        {/* Decorative Elements */}
-        <div className="absolute bottom-8 right-8 text-blue-100 dark:text-blue-900 text-9xl font-serif opacity-20 dark:opacity-10 select-none">"</div>
       </div>
-    </div>
+
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { 
+            transform: translateY(0px) rotate(0deg); 
+            opacity: 0.7;
+          }
+          50% { 
+            transform: translateY(-40px) rotate(180deg); 
+            opacity: 1;
+          }
+        }
+        
+        .animate-float {
+          animation: float 10s ease-in-out infinite;
+        }
+      `}</style>
+    </section>
   )
 }

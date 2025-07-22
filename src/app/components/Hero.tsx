@@ -43,29 +43,10 @@ export default function LandingPage() {
     }}
   >
       {/* Header */}
-      <header className="relative z-10 border-b border-gray-800/50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">P</span>
-              </div>
-              <span className="font-semibold text-gray-200">Puzzle Fintech Website Design</span>
-            </div>
-
-            <nav className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Features</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Solutions</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Pricing</a>
-            </nav>
-
-            <Button className="bg-white text-gray-900 hover:bg-gray-100 text-sm px-6">Get Demo</Button>
-          </div>
-        </div>
-      </header>
+     
 
       {/* Main Content */}
-      <main className="relative z-10 container mx-auto px-4 py-20">
+      <main className="relative z-10 container mx-auto px-4 py-32">
         <div className="bg-gradient-to-r  from-[#211F36] to-[#4a2a58]  backdrop-blur-xl rounded-3xl border border-gray-700/30 p-8 md:p-12 shadow-2xl">
           {/* Hero Title */}
           <div className="text-center mb-12">
