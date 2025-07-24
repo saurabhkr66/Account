@@ -93,14 +93,10 @@ export default function Testimonial() {
   const currentTestimonial = testimonials[currentIndex]
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-orange-50 via-rose-50 to-purple-50 py-24 px-4 overflow-hidden">
+    <section className="relative min-h-screen py-24 px-4 overflow-hidden">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-emerald-200/40 to-teal-300/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-violet-200/40 to-purple-300/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-pink-200/35 to-rose-300/25 rounded-full blur-2xl animate-bounce" style={{ animationDuration: '4s' }}></div>
-        <div className="absolute top-1/3 right-1/3 w-48 h-48 bg-gradient-to-br from-cyan-200/35 to-blue-300/25 rounded-full blur-2xl animate-pulse delay-500"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-56 h-56 bg-gradient-to-br from-yellow-200/30 to-orange-300/20 rounded-full blur-3xl animate-pulse delay-300"></div>
         
         {/* Animated Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:80px_80px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
@@ -131,23 +127,23 @@ export default function Testimonial() {
           className="text-center mb-20"
         >
           {/* Enhanced Badge */}
-          <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-emerald-100/80 to-cyan-100/80 border-2 border-emerald-200/50 backdrop-blur-sm rounded-full mb-10">
-            <Award className="w-5 h-5 text-emerald-600" />
-            <span className="text-emerald-700 font-semibold text-lg">Client Testimonials</span>
-            <Sparkles className="w-5 h-5 text-emerald-600" />
+          <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-sky-100/80 to-indigo-100/80 border-2 border-sky-200/50 backdrop-blur-sm rounded-full mb-10">
+            <Award className="w-5 h-5 text-sky-600" />
+            <span className="text-sky-700 font-semibold text-lg">Client Testimonials</span>
+            <Sparkles className="w-5 h-5 text-blue-600" />
           </div>
 
           {/* Enhanced Main Heading */}
           <div className="relative mb-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 leading-tight">
-              Our <span className="bg-gradient-to-r from-emerald-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">Success</span> Stories
+              Our <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">Success</span> Stories
             </h1>
           </div>
 
           {/* Enhanced Subtitle */}
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Discover how we've transformed businesses with our expert accounting solutions and 
-            <span className="text-emerald-600 font-semibold"> exceptional service</span>
+            <span className="text-sky-600 font-semibold"> exceptional service</span>
           </p>
         </motion.div>
 
@@ -163,9 +159,9 @@ export default function Testimonial() {
             className="text-center group"
           >
             <div className="relative">
-              <div className="absolute -inset-2 bg-gradient-to-r from-emerald-400 to-cyan-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 to-blue-500 rounded-2xl  blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
               <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-gray-200/50 group-hover:border-emerald-200/70 transition-all duration-300">
-                <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">500+</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent">500+</div>
                 <div className="text-sm text-gray-600 font-medium">Happy Clients</div>
               </div>
             </div>
@@ -224,7 +220,7 @@ export default function Testimonial() {
           </Button>
 
           {/* Enhanced Main Testimonial Card */}
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -282,8 +278,6 @@ export default function Testimonial() {
                   </div>
 
                   {/* Decorative Elements */}
-                  <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-emerald-200/40 to-cyan-300/30 rounded-full blur-xl"></div>
-                  <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-br from-blue-200/40 to-indigo-300/30 rounded-full blur-lg"></div>
                 </div>
               </motion.div>
             </AnimatePresence>

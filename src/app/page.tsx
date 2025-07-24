@@ -1,12 +1,12 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Testimonial from './components/testimonial';
-import ServicesSection from './components/Services2';
 import HowItWorksSection from './components/howItWork';
+import FaqSection from './components/FAQ';
+import ServicesSection from './Services/page';
 
 const Index = () => {
   return (
@@ -17,16 +17,22 @@ const Index = () => {
           <Hero />
         </section>
         <section id="services">
-          <ServicesSection />
+          <ServicesSection/>
+          
         </section>
-         <section id="how it work">
+         <section id="how-it-works">
           <HowItWorksSection />
         </section>
         <section id="about">
           <About />
         </section>
-        <section id="contact">
+        <section id="FaqSection">
+          <FaqSection />
+
+        </section>
+         <section id="Contact">
           <Contact />
+          
         </section>
         <section id="testimonial">
           <Testimonial/>

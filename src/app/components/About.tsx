@@ -24,7 +24,7 @@ export default function Component() {
   const features = [
     {
       icon: Calculator,
-      title: "Expert Financial Management",
+      title: "Expert Management",
       description: "Professional bookkeeping and financial reporting with 99.9% accuracy guarantee and real-time insights",
       color: "from-emerald-500 via-teal-500 to-cyan-600",
       hoverColor: "from-emerald-600 via-teal-600 to-cyan-700",
@@ -80,15 +80,10 @@ export default function Component() {
   ]
 
   return (
-    <section className="py-24 bg-gradient-to-br from-orange-50 via-rose-50 to-purple-50 overflow-hidden relative">
+    <section className="py-24  overflow-hidden relative">
       {/* Enhanced Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-emerald-200/40 to-teal-300/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-violet-200/40 to-purple-300/30 rounded-full blur-3xl animate-pulse delay-1000" />
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-pink-200/35 to-rose-300/25 rounded-full blur-2xl animate-bounce" style={{ animationDuration: '4s' }} />
-        <div className="absolute top-1/3 right-1/3 w-48 h-48 bg-gradient-to-br from-cyan-200/35 to-blue-300/25 rounded-full blur-2xl animate-pulse delay-500" />
-        <div className="absolute bottom-1/3 left-1/4 w-56 h-56 bg-gradient-to-br from-yellow-200/30 to-orange-300/20 rounded-full blur-3xl animate-pulse delay-300" />
-        <div className="absolute top-1/4 right-1/4 w-40 h-40 bg-gradient-to-br from-indigo-200/35 to-violet-300/25 rounded-full blur-2xl animate-pulse delay-700" />
         
         {/* Animated Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
@@ -99,7 +94,7 @@ export default function Component() {
         {[...Array(25)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-gradient-to-r from-emerald-400/60 via-cyan-400/60 to-blue-400/60 rounded-full animate-float"
+            className="absolute w-1 h-1 bg-gradient-to-r from-sky-400/60 via-blue-400/60 to-indigo-400/60 rounded-full animate-float"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -118,15 +113,15 @@ export default function Component() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-100/80 to-cyan-100/80 border-2 border-emerald-200/50 text-emerald-700 px-6 py-3 rounded-full text-sm font-semibold mb-8 backdrop-blur-sm shadow-lg">
-            <Star className="w-4 h-4 text-emerald-600" />
+          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-sky-100/80 to-cyan-100/80 border-2 border-sky-200/50 text-sky-700 px-6 py-3 rounded-full text-sm font-semibold mb-8 backdrop-blur-sm shadow-lg">
+            <Star className="w-4 h-4 text-sky-600" />
             Trusted by 10,000+ Businesses
-            <Sparkles className="w-4 h-4 text-emerald-600" />
+            <Sparkles className="w-4 h-4 text-sky-600" />
           </div>
           
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-800 mb-8 leading-tight">
             Why Choose Our{" "}
-            <span className="bg-gradient-to-r from-emerald-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent animate-gradient-x">
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent animate-gradient-x">
               Accounting Service
             </span>
           </h2>
@@ -152,13 +147,13 @@ export default function Component() {
             >
               <div className="relative">
                 {/* Glow Effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400 to-cyan-500 rounded-3xl blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-sky-400 to-cyan-500 rounded-3xl blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
                 
-                <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-gray-200/50 overflow-hidden group-hover:border-emerald-200/70">
+                <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-gray-200/50 overflow-hidden group-hover:border-sky-200/70">
                   {/* Icon */}
-                  <stat.icon className="w-10 h-10 text-emerald-600 mx-auto mb-4 group-hover:scale-110 group-hover:text-cyan-600 transition-all duration-300" />
+                  <stat.icon className="w-10 h-10 text-cyan-600 mx-auto mb-4 group-hover:scale-110 group-hover:text-cyan-600 transition-all duration-300" />
                   
-                  <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent mb-2">
+                  <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text text-transparent mb-2">
                     {stat.number}
                   </div>
                   
@@ -191,11 +186,8 @@ export default function Component() {
                 
                 <CardContent className="relative p-8 h-full flex flex-col">
                   {/* Animated Background Gradient */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 transition-all duration-700 animate-gradient-x`} />
                   
                   {/* Enhanced Floating Orbs */}
-                  <div className={`absolute top-4 right-4 w-24 h-24 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-20 rounded-full blur-xl transition-all duration-500 animate-pulse`} />
-                  <div className={`absolute bottom-4 left-4 w-20 h-20 bg-gradient-to-br ${feature.hoverColor} opacity-0 group-hover:opacity-15 rounded-full blur-lg transition-all duration-700 animate-bounce`} />
 
                   {/* Enhanced Icon */}
                   <div className="relative mb-6">
