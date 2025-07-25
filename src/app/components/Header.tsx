@@ -61,10 +61,17 @@ export default function Header() {
   return (
     <header className="fixed top-4 left-0 w-full z-50 transition-colors duration-500">
       <div className={`max-w-[96rem] mx-auto rounded-xl backdrop-blur-lg px-6 h-24 flex justify-between items-center border transition-all duration-500 ${styles.bg} ${styles.shadow}`}>
+        
         <button
           onClick={() => scrollToSection('home')}
-          className="text-2xl font-bold px-9 text-gradient bg-gradient-to-r from-sky-500 via-blue-400 to-indigo-600 bg-clip-text text-transparent"
+          className="text-3xl  flex flex-grid-2 font-bold px-9 text-gradient bg-gradient-to-r from-sky-500 via-blue-400 to-indigo-600 bg-clip-text text-transparent"
         >
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 0L32 16L16 32L0 16L16 0Z" fill="#A78BFA"/>
+      <path d="M16 4.5L27.5 16L16 27.5L4.5 16L16 4.5Z" fill="#8B5CF6"/>
+      <path d="M16 9L23 16L16 23L9 16L16 9Z" fill="white"/>
+      {" "}
+    </svg>
           Account
         </button>
         <nav className="flex gap-8 items-center">

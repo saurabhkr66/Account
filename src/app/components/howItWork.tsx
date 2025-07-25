@@ -24,7 +24,7 @@ const services = [
 
 // Reusable Card Component
 const ServiceCard = ({ title, description }) => (
-  <div className="flex h-full flex-col justify-between rounded-2xl bg-slate-100/80 p-8 text-center transition-all duration-300 hover:bg-white hover:shadow-2xl hover:-translate-y-2">
+  <div className="flex h-[320px] mt-24 flex-col  border-2 justify-between rounded-2xl bg-slate-100/80 p-8 text-center transition-all duration-300 hover:bg-white hover:shadow-2xl hover:-translate-y-2">
     <div>
       <h3 className="text-2xl font-bold text-gray-800">{title}</h3>
       <p className="mt-4 text-gray-600">{description}</p>
@@ -33,7 +33,7 @@ const ServiceCard = ({ title, description }) => (
       href="#"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="group mt-8 inline-flex items-center justify-center self-center rounded-full bg-gradient-to-r from-indigo-600 via-blue-500 to-sky-400 px-8 py-3 text-lg font-bold text-white shadow-lg transition-transform duration-300"
+      className="group mb-6 inline-flex items-center justify-center self-center rounded-full bg-gradient-to-r from-indigo-600 via-blue-500 to-sky-400 px-8 py-3 text-lg font-bold text-white shadow-lg transition-transform duration-300"
     >
       View Pricing
       <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -66,8 +66,12 @@ export default function WhoWeServe() {
         variants={containerVariants}
       >
         <div className="text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            Who We Serve?
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-800 mb-8 leading-tight">
+            Who We{" "}
+            
+<span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
+  Serve
+</span>?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-gray-600">
             Empowering businesses of all sizes to thrive.
