@@ -7,6 +7,7 @@ import Testimonial from './components/testimonial';
 import HowItWorksSection from './components/howItWork';
 import FaqSection from './components/FAQ';
 import ServicesSection from './Services/page';
+import Cta from './components/cta';
 
 const Index = () => {
   return (
@@ -33,6 +34,9 @@ const Index = () => {
          <section id="Contact">
           <Contact />
           
+        </section>
+         <section id="cta">
+          <Cta/>
         </section>
         <section id="testimonial">
           <Testimonial/>

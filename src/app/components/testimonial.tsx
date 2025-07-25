@@ -96,10 +96,8 @@ export default function Testimonial() {
     <section className="relative min-h-screen py-24 px-4 overflow-hidden">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-pink-200/35 to-rose-300/25 rounded-full blur-2xl animate-bounce" style={{ animationDuration: '4s' }}></div>
-        
         {/* Animated Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:80px_80px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(56,189,248,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(56,189,248,0.05)_1px,transparent_1px)] bg-[size:80px_80px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
       </div>
 
       {/* Floating Elements */}
@@ -107,7 +105,7 @@ export default function Testimonial() {
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-gradient-to-r from-emerald-400/60 via-cyan-400/60 to-blue-400/60 rounded-full animate-float"
+            className="absolute w-1 h-1 bg-gradient-to-r from-sky-400/60 via-blue-500/60 to-indigo-600/60 rounded-full animate-float"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -130,13 +128,13 @@ export default function Testimonial() {
           <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-sky-100/80 to-indigo-100/80 border-2 border-sky-200/50 backdrop-blur-sm rounded-full mb-10">
             <Award className="w-5 h-5 text-sky-600" />
             <span className="text-sky-700 font-semibold text-lg">Client Testimonials</span>
-            <Sparkles className="w-5 h-5 text-blue-600" />
+            <Sparkles className="w-5 h-5 text-indigo-600" />
           </div>
 
           {/* Enhanced Main Heading */}
           <div className="relative mb-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 leading-tight">
-              Our <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">Success</span> Stories
+              Our <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">Success</span> Stories
             </h1>
           </div>
 
@@ -147,7 +145,7 @@ export default function Testimonial() {
           </p>
         </motion.div>
 
-        {/* Enhanced Statistics Bar - Using the commented stats */}
+        {/* Enhanced Statistics Bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -159,9 +157,9 @@ export default function Testimonial() {
             className="text-center group"
           >
             <div className="relative">
-              <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 to-blue-500 rounded-2xl  blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-gray-200/50 group-hover:border-emerald-200/70 transition-all duration-300">
-                <div className="text-3xl font-bold bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent">500+</div>
+              <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-gray-200/50 group-hover:border-sky-200/70 transition-all duration-300">
+                <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">500+</div>
                 <div className="text-sm text-gray-600 font-medium">Happy Clients</div>
               </div>
             </div>
@@ -174,9 +172,9 @@ export default function Testimonial() {
             className="text-center group"
           >
             <div className="relative">
-              <div className="absolute -inset-2 bg-gradient-to-r from-pink-400 to-rose-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-gray-200/50 group-hover:border-pink-200/70 transition-all duration-300">
-                <div className="text-3xl font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">4.9/5</div>
+              <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-gray-200/50 group-hover:border-blue-200/70 transition-all duration-300">
+                <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">4.9/5</div>
                 <div className="text-sm text-gray-600 font-medium">Average Rating</div>
               </div>
             </div>
@@ -189,9 +187,9 @@ export default function Testimonial() {
             className="text-center group"
           >
             <div className="relative">
-              <div className="absolute -inset-2 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-gray-200/50 group-hover:border-blue-200/70 transition-all duration-300">
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">99%</div>
+              <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-gray-200/50 group-hover:border-indigo-200/70 transition-all duration-300">
+                <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">99%</div>
                 <div className="text-sm text-gray-600 font-medium">Satisfaction Rate</div>
               </div>
             </div>
@@ -205,18 +203,18 @@ export default function Testimonial() {
             variant="ghost"
             size="icon"
             onClick={handlePrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 h-14 w-14 rounded-full bg-white/80 backdrop-blur-sm border-2 border-gray-200/50 hover:bg-white/90 hover:border-emerald-200/70 shadow-lg group transition-all duration-300"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 h-14 w-14 rounded-full bg-white/80 backdrop-blur-sm border-2 border-gray-200/50 hover:bg-white/90 hover:border-sky-200/70 shadow-lg group transition-all duration-300"
           >
-            <ChevronLeft className="h-6 w-6 text-gray-600 group-hover:text-emerald-600 transition-colors duration-300" />
+            <ChevronLeft className="h-6 w-6 text-gray-600 group-hover:text-sky-600 transition-colors duration-300" />
           </Button>
 
           <Button
             variant="ghost"
             size="icon"
             onClick={handleNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 h-14 w-14 rounded-full bg-white/80 backdrop-blur-sm border-2 border-gray-200/50 hover:bg-white/90 hover:border-emerald-200/70 shadow-lg group transition-all duration-300"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 h-14 w-14 rounded-full bg-white/80 backdrop-blur-sm border-2 border-gray-200/50 hover:bg-white/90 hover:border-sky-200/70 shadow-lg group transition-all duration-300"
           >
-            <ChevronRight className="h-6 w-6 text-gray-600 group-hover:text-emerald-600 transition-colors duration-300" />
+            <ChevronRight className="h-6 w-6 text-gray-600 group-hover:text-sky-600 transition-colors duration-300" />
           </Button>
 
           {/* Enhanced Main Testimonial Card */}
@@ -231,16 +229,16 @@ export default function Testimonial() {
                 className="relative"
               >
                 {/* Glow Effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400 via-cyan-500 to-blue-500 rounded-3xl blur-xl opacity-20"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 rounded-3xl blur-xl opacity-20"></div>
                 
                 <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl border-2 border-gray-200/50 overflow-hidden">
                   <div className="relative z-10">
                     {/* Enhanced Customer Info */}
                     <div className="flex items-center gap-8 mb-10">
                       <div className="relative">
-                        <Avatar className="h-24 w-24 ring-4 ring-emerald-500/50 shadow-xl">
+                        <Avatar className="h-24 w-24 ring-4 ring-sky-400/50 shadow-xl">
                           <AvatarImage src={currentTestimonial.avatar || "/placeholder.svg"} alt={currentTestimonial.name} />
-                          <AvatarFallback className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white font-bold text-2xl">
+                          <AvatarFallback className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 text-white font-bold text-2xl">
                             {currentTestimonial.initials}
                           </AvatarFallback>
                         </Avatar>
@@ -254,7 +252,7 @@ export default function Testimonial() {
                       
                       <div className="flex-1">
                         <h3 className="text-3xl font-bold text-gray-800 mb-2">{currentTestimonial.name}</h3>
-                        <p className="text-emerald-600 text-xl font-medium mb-1">{currentTestimonial.title}</p>
+                        <p className="text-sky-600 text-xl font-medium mb-1">{currentTestimonial.title}</p>
                         <p className="text-gray-500 text-lg">{currentTestimonial.company}</p>
                         
                         {/* Star Rating */}
@@ -269,15 +267,13 @@ export default function Testimonial() {
 
                     {/* Enhanced Testimonial Text */}
                     <blockquote className="text-gray-700 text-xl md:text-2xl leading-relaxed font-medium relative">
-                      <span className="text-emerald-500 text-6xl font-serif absolute -top-4 -left-2 opacity-50">"</span>
+                      <span className="text-sky-400 text-6xl font-serif absolute -top-4 -left-2 opacity-50">"</span>
                       <span className="relative z-10 block pl-8">
                         {currentTestimonial.text}
                       </span>
-                      <span className="text-cyan-500 text-6xl font-serif absolute -bottom-8 -right-2 opacity-50">"</span>
+                      <span className="text-indigo-600 text-6xl font-serif absolute -bottom-8 -right-2 opacity-50">"</span>
                     </blockquote>
                   </div>
-
-                  {/* Decorative Elements */}
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -299,12 +295,12 @@ export default function Testimonial() {
                 }}
                 className={`relative h-4 w-4 rounded-full transition-all duration-500 ${
                   index === currentIndex 
-                    ? "bg-gradient-to-r from-emerald-500 to-cyan-500 scale-125 shadow-lg shadow-emerald-500/50" 
+                    ? "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 scale-125 shadow-lg shadow-sky-500/50" 
                     : "bg-gray-400 hover:bg-gray-500 hover:scale-110"
                 }`}
               >
                 {index === currentIndex && (
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 animate-ping opacity-20"></div>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 animate-ping opacity-20"></div>
                 )}
               </button>
             ))}

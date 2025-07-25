@@ -216,13 +216,7 @@ export default function FaqContactSection() {
                 Submit
               </button>
             </form>
-            <div className="py-12 text-gray-600 dark:text-gray-300">
-              <p>
-                ROI7 Presenter, a project of ROIFORCIO GmbH, is committed to protecting and
-                respecting your privacy according to our Privacy Policy. From time to time we would
-                like to contact you about our products and services that may be of your interest.
-              </p>
-            </div>
+            
           </div>
 
           {/* Contact Info & Image */}
@@ -234,7 +228,7 @@ export default function FaqContactSection() {
               height={200}
               className="h-auto w-full rounded-lg border-4 border-gray-300 dark:border-gray-600"
             />
-            <div className="space-y-6 rounded-lg bg-white p-6 shadow-lg dark:bg-gray-800">
+            {/* <div className="space-y-6 rounded-lg bg-white p-6 shadow-lg dark:bg-gray-800">
               <div className="flex items-center space-x-4">
                 <Mail className="h-6 w-6 text-blue-500 dark:text-blue-400" />
                 <div>
@@ -259,7 +253,7 @@ export default function FaqContactSection() {
                   <p className="text-gray-600 dark:text-gray-300">Sikar, Rajasthan-332406</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
