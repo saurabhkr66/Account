@@ -95,7 +95,7 @@ export default function ServicesSection() {
       icon: Globe,
       image: "/bookeeping.webp",
       features: ["Global compliance", "Multi-currency support", "International standards"],
-       gradient: "from-cyan-400 via-blue-500 to-indigo-600",
+       gradient: "from-sky-400 via-blue-500 to-indigo-600",
       hoverGradient: "from-cyan-600 to-blue-700",
       comingSoon: true,
     },

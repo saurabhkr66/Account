@@ -94,7 +94,7 @@ export default function FaqSection() {
           </div>
 
           {/* Right Side - FAQ List */}
-          <div className="space-y-4 ">
+          <div className="space-y-4 pt-18 ">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
@@ -105,7 +105,7 @@ export default function FaqSection() {
                 <Card className="bg-white/80 backdrop-blur-sm border-2 border-gray-200/50 shadow hover:shadow-md transition-all">
                   <button
                     onClick={() => toggleFaq(index)}
-                    className="w-full px-6 py-2  flex justify-between items-center text-left hover:bg-emerald-50/30"
+                    className="w-full px-6 py-1  flex justify-between items-center text-left hover:bg-emerald-50/30"
                   >
                     <span className="text-lg font-medium text-gray-800 pr-4">
                       {faq.question}
