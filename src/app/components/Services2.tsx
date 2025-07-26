@@ -241,11 +241,17 @@ export default function ServicesSection() {
 
                       <div className="flex gap-4">
                         <Button
-                          className={`flex-1 bg-gradient-to-r ${service.gradient} hover:${service.hoverGradient} hover:shadow-lg text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg ${service.comingSoon ? 'opacity-50 cursor-not-allowed' : ''}`}
-                          disabled={service.comingSoon}
-                        >
-                          {service.comingSoon ? "Notify Me" : "Get Started"}
-                        </Button>
+  onClick={() => {
+    if (!service.comingSoon) {
+      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+  className={`flex-1 bg-gradient-to-r ${service.gradient} hover:${service.hoverGradient} hover:shadow-lg text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg ${service.comingSoon ? 'opacity-50 cursor-not-allowed' : ''}`}
+  disabled={service.comingSoon}
+>
+  {service.comingSoon ? "Notify Me" : "Get Started"}
+</Button>
+
                         <Button
                           variant="outline"
                           className={`border-2 bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent border-gray-300 hover:border-gray-400 hover:bg-gray-50 font-semibold py-3 px-6 rounded-lg transition-all duration-300 backdrop-blur-sm transform hover:scale-105 shadow-lg`}
