@@ -11,7 +11,8 @@ export default function LandingPage() {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-gray-300">
           Accounting Services That
           <br />
-          Exceeds Expectations
+          <span className="bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent"> Exceeds Expectations</span>
+          
         </h1>
       </div>
 
