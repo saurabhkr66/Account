@@ -35,7 +35,9 @@ const Index = () => {
         <section id="faq"> {/* ✅ fixed from 'FaqSection' */}
           <FaqSection />
         </section>
-
+<section id="testimonial">
+          <Testimonial />
+        </section>
         <section id="contact"> {/* ✅ fixed from 'Contact' */}
           <ContactUs />
         </section>
@@ -44,9 +46,7 @@ const Index = () => {
           <Cta />
         </section>
 
-        <section id="testimonial">
-          <Testimonial />
-        </section>
+        
       </main>
       <Footer />
     </div>

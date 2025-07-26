@@ -21,96 +21,97 @@ export default function ServicesSection() {
     {
       id: 1,
       title: "Bookkeeping",
-      description: "Comprehensive bookkeeping services to maintain accurate financial records with precision and care.",
+      description: "Maintain clean, accurate, and up-to-date records of all your financial transactions. We ensure clarity and compliance across your entire bookkeeping process.",
       icon: Calculator,
-      image: "/bookeeping.webp",
-      features: ["Daily transaction recording", "Bank reconciliation", "Financial data organization"],
-      gradient: "from-sky-400 via-blue-500 to-indigo-600",
-      hoverGradient: "from-cyan-600 to-blue-700",
+      image: "/accounting.jpg",
+      features: ["Daily/monthly transaction tracking", "Financial statements & ledgers"],
+      gradient: "from-sky-400 to-blue-400 ",
+      hoverGradient: "from-sky-400 to-blue-400",
     },
     {
       id: 2,
       title: "Invoicing Solutions",
-      description: "Streamlined invoicing systems to manage billing and payments effortlessly.",
+      description: "Automate and streamline your billing process with smart invoicing solutions. Get paid faster with professional, error-free invoices.",
       icon: FileText,
       image: "/bookeeping.webp",
-      features: ["Automated billing", "Payment tracking", "Custom invoice templates"],
-       gradient: "from-sky-400 via-blue-500 to-indigo-600",
-      hoverGradient: "from-cyan-600 to-blue-700",
+      features: ["Recurring & one-time invoice generation", "Payment tracking and reminders"],
+      gradient: "from-sky-400 to-blue-400 ",
+      hoverGradient: "from-sky-400 to-blue-400",
     },
     {
       id: 3,
       title: "Payroll Management",
-      description: "Complete payroll processing and labor law compliance for your peace of mind.",
+      description: "Simplify salary disbursement, tax deductions, and compliance. We manage payroll end-to-end, keeping your team happy and on time.",
       icon: Users,
-      image: "/bookeeping.webp",
-      features: ["Salary calculations", "Tax deductions", "Compliance management"],
-        gradient: "from-sky-400 via-blue-500 to-indigo-600",
-      hoverGradient: "from-cyan-600 to-blue-700",
+      image: "/payroll.jpg",
+      features: ["Salary calculations & payslip generation", "PF, ESI, TDS compliance and filing"],
+      gradient: "from-sky-400 to-blue-400 ",
+      hoverGradient: "from-sky-400 to-blue-400",
     },
     {
       id: 4,
       title: "Accounting",
-      description: "Full-service accounting solutions and comprehensive financial statements.",
+      description: "Gain complete control and visibility into your finances with expert accounting. We deliver reliable and audit-ready accounts tailored to your business.",
       icon: DollarSign,
       image: "/bookeeping.webp",
-      features: ["Financial statements", "Ledger management", "Financial analysis"],
-        gradient: "from-sky-400 via-blue-500 to-indigo-600",
-      hoverGradient: "from-cyan-600 to-blue-700",
+      features: ["General ledger & journal entries", "Trial balance & year-end closure"],
+      gradient: "from-sky-400 to-blue-400 ",
+      hoverGradient: "from-sky-400 to-blue-400",
     },
     {
       id: 5,
-      title: "Tax Consulting ",
-      description: "Expert tax consultation and GST compliance to maximize your savings.",
+      title: "Tax Consulting (Income Tax/GST)",
+      description: "Avoid penalties and maximize tax savings with expert advice and compliance. We manage all your GST and Income Tax requirements efficiently.",
       icon: Receipt,
       image: "/bookeeping.webp",
-      features: ["Income tax planning", "GST compliance", "Tax optimization"],
-       gradient: "from-sky-400 via-blue-500 to-indigo-600",
-      hoverGradient: "from-cyan-600 to-blue-700",
+      features: ["GST registration, filing & IT returns", "Tax planning and consultancy"],
+      gradient: "from-sky-400 to-blue-400 ",
+      hoverGradient: "from-sky-400 to-blue-400",
     },
     {
       id: 6,
       title: "MCA Work",
-      description: "Corporate compliance services for seamless company registration and filings.",
+      description: "Stay compliant with Ministry of Corporate Affairs regulations and filings. From incorporation to annual compliance—we've got it covered.",
       icon: Building,
       image: "/bookeeping.webp",
-      features: ["Company registration", "Annual filings", "Regulatory compliance"],
-      gradient: "from-sky-400 via-blue-500 to-indigo-600",
-      hoverGradient: "from-cyan-600 to-blue-700",
+      features: ["ROC filing & Director KYC", "Company incorporation & amendments"],
+      gradient: "from-sky-400 to-blue-400 ",
+      hoverGradient: "from-sky-400 to-blue-400",
     },
     {
       id: 7,
-      title: "Tax & Accounting Work",
-      description: "Comprehensive tax and accounting services tailored to your needs.",
+      title: "Other Tax & Accounting Work",
+      description: "From audits to registrations, we handle everything beyond the basics. A one-stop solution for all your business compliance needs.",
       icon: FileCheck,
       image: "/bookeeping.webp",
-      features: ["Financial management", "Regulatory compliance", "Custom solutions"],
-       gradient: "from-sky-400 via-blue-500 to-indigo-600",
-      hoverGradient: "from-cyan-600 to-blue-700",
+      features: ["Audit support & financial certifications", "Registration for PAN, TAN, MSME, etc."],
+      gradient: "from-sky-400 to-blue-400 ",
+      hoverGradient: "from-sky-400 to-blue-400",
     },
     {
       id: 8,
       title: "Foreign Accounting",
-      description: "Coming soon: International accounting for global businesses expansion.",
+      description: "Soon launching international accounting services for global compliance. Expand confidently with our expert support across borders.",
       icon: Globe,
       image: "/bookeeping.webp",
-      features: ["Global compliance", "Multi-currency support", "International standards"],
-       gradient: "from-sky-400 via-blue-500 to-indigo-600",
-      hoverGradient: "from-cyan-600 to-blue-700",
+      features: ["Multi-currency bookkeeping & reporting", "Compliance with US, UK, UAE standards"],
+      gradient: "from-sky-400 to-blue-400 ",
+      hoverGradient: "from-sky-400 to-blue-400",
       comingSoon: true,
     },
-  ]
+]
+
 
   return (
     <section className="min-h-screen py-20  relative overflow-hidden">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-200/30 to-blue-300/30 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-violet-200/30 to-purple-300/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-emerald-200/20 to-teal-200/20 rounded-full blur-3xl animate-pulse delay-500"></div>
         <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-pink-200/40 to-rose-300/40 rounded-full blur-2xl animate-pulse delay-700"></div>
         <div className="absolute bottom-20 left-20 w-40 h-40 bg-gradient-to-br from-yellow-200/30 to-orange-300/30 rounded-full blur-2xl animate-pulse delay-300"></div>
-      </div>
+      </div> */}
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Enhanced Header */}
@@ -135,7 +136,7 @@ export default function ServicesSection() {
           >
             Everything Your Business
             <br />
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-400  to-blue-500 bg-clip-text text-transparent">
               Looking For
             </span>
           </motion.h2>
@@ -202,9 +203,7 @@ export default function ServicesSection() {
                       <div className={`absolute inset-0 bg-gradient-to-t ${service.gradient} opacity-20 group-hover:opacity-30 transition-opacity duration-500`}></div>
                       
                       {/* Floating Icon */}
-                      <div className="absolute top-4 left-4 w-12 h-12  backdrop-blur-md rounded-2xl flex items-center justify-center border-2 border-white/50 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 shadow-lg">
-                        <Icon className={`w-6 h-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent`} />
-                      </div>
+                      
                     </div>
 
                     {/* Enhanced Content */}
@@ -242,14 +241,14 @@ export default function ServicesSection() {
 
                       <div className="flex gap-4">
                         <Button
-                          className={`flex-1 bg-gradient-to-r ${service.gradient} hover:${service.hoverGradient} hover:shadow-lg text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg ${service.comingSoon ? 'opacity-50 cursor-not-allowed' : ''}`}
+                          className={`flex-1 bg-gradient-to-r ${service.gradient} hover:${service.hoverGradient} hover:shadow-lg text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg ${service.comingSoon ? 'opacity-50 cursor-not-allowed' : ''}`}
                           disabled={service.comingSoon}
                         >
                           {service.comingSoon ? "Notify Me" : "Get Started"}
                         </Button>
                         <Button
                           variant="outline"
-                          className={`border-2 bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent border-gray-300 hover:border-gray-400 hover:bg-gray-50 font-semibold py-3 px-6 rounded-xl transition-all duration-300 backdrop-blur-sm transform hover:scale-105 shadow-lg`}
+                          className={`border-2 bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent border-gray-300 hover:border-gray-400 hover:bg-gray-50 font-semibold py-3 px-6 rounded-lg transition-all duration-300 backdrop-blur-sm transform hover:scale-105 shadow-lg`}
                         >
                           Learn More
                         </Button>

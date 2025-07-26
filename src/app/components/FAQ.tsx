@@ -45,7 +45,7 @@ export default function FaqSection() {
   const toggleFaq = (index: number) => setOpenFaq(openFaq === index ? null : index)
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50">
+    <section className="py-24 px-4 ">
       <div className="container mx-auto max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           
@@ -61,7 +61,7 @@ export default function FaqSection() {
               <h2 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6">
                 Frequently Asked
                 <br />
-                <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">
                   Questions
                 </span>
               </h2>

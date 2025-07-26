@@ -134,7 +134,7 @@ export default function Testimonial() {
           {/* Enhanced Main Heading */}
           <div className="relative mb-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 leading-tight">
-              Our <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">Success</span> Stories
+              Our <span className="bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">Success</span> Stories
             </h1>
           </div>
 
@@ -157,9 +157,9 @@ export default function Testimonial() {
             className="text-center group"
           >
             <div className="relative">
-              <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-gray-200/50 group-hover:border-sky-200/70 transition-all duration-300">
-                <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">500+</div>
+              <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 to-blue-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6  border-2 border-gray-200/50 group-hover:border-sky-200/70 transition-all duration-300">
+                <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">500+</div>
                 <div className="text-sm text-gray-600 font-medium">Happy Clients</div>
               </div>
             </div>
@@ -172,9 +172,9 @@ export default function Testimonial() {
             className="text-center group"
           >
             <div className="relative">
-              <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 to-blue-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
               <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-gray-200/50 group-hover:border-blue-200/70 transition-all duration-300">
-                <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">4.9/5</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">4.9/5</div>
                 <div className="text-sm text-gray-600 font-medium">Average Rating</div>
               </div>
             </div>
@@ -187,9 +187,9 @@ export default function Testimonial() {
             className="text-center group"
           >
             <div className="relative">
-              <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 to-blue-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
               <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-gray-200/50 group-hover:border-indigo-200/70 transition-all duration-300">
-                <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">99%</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">99%</div>
                 <div className="text-sm text-gray-600 font-medium">Satisfaction Rate</div>
               </div>
             </div>
@@ -229,21 +229,20 @@ export default function Testimonial() {
                 className="relative"
               >
                 {/* Glow Effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 rounded-3xl blur-xl opacity-20"></div>
                 
-                <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl border-2 border-gray-200/50 overflow-hidden">
+<div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 border-2 border-gray-200/50 overflow-hidden ring-8 ring-sky-300 ring-offset-2 ring-offset-blue">
                   <div className="relative z-10">
                     {/* Enhanced Customer Info */}
                     <div className="flex items-center gap-8 mb-10">
                       <div className="relative">
-                        <Avatar className="h-24 w-24 ring-4 ring-sky-400/50 shadow-xl">
+                        <Avatar className="h-24 w-24 ring-4 ring-sky-400/50 ">
                           <AvatarImage src={currentTestimonial.avatar || "/placeholder.svg"} alt={currentTestimonial.name} />
-                          <AvatarFallback className="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 text-white font-bold text-2xl">
+                          <AvatarFallback className="bg-gradient-to-r from-sky-400 to-blue-500 text-white font-bold text-2xl">
                             {currentTestimonial.initials}
                           </AvatarFallback>
                         </Avatar>
                         {/* Verified Badge */}
-                        <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center border-2 border-white shadow-lg">
+                        <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center border-2 border-white ">
                           <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
@@ -295,7 +294,7 @@ export default function Testimonial() {
                 }}
                 className={`relative h-4 w-4 rounded-full transition-all duration-500 ${
                   index === currentIndex 
-                    ? "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 scale-125 shadow-lg shadow-sky-500/50" 
+                    ? "bg-gradient-to-r from-sky-400 to-blue-500 scale-125" 
                     : "bg-gray-400 hover:bg-gray-500 hover:scale-110"
                 }`}
               >

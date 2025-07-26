@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, X, Linkedin, Facebook, Instagram, MessageSquare } 
 
 // A simple SVG component for the logo to match the design
 const TeklumeLogo = () => (
-  <div className="flex items-center gap-2">
+  <div className="flex items-center gap-2 ">
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M16 0L32 16L16 32L0 16L16 0Z" fill="#A78BFA"/>
       <path d="M16 4.5L27.5 16L16 27.5L4.5 16L16 4.5Z" fill="#8B5CF6"/>
@@ -28,9 +28,9 @@ const SocialIcon = ({ href, 'aria-label': ariaLabel, children }) => (
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-gray-700 py-16 font-sans border-t border-gray-200">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="bg-white text-gray-700 py-10 font-sans border-t border-gray-200">
+      <div className="container mx-auto px-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-70 justify-around">
           
           {/* Column 1: Logo, Tagline, Socials */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
