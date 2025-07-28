@@ -12,7 +12,7 @@ export default function Cta() {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="mt-24 text-center"
+        className="text-center"
       >
         <div className="w-full pb-24 pt-24">
           <div className="relative block  max-w-7xl mx-auto">
