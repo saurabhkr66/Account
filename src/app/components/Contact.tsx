@@ -1,16 +1,16 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { User, Mail, Phone, MessageSquare, Send, CheckCircle, MapPin } from 'lucide-react';
+import { User, Mail, Phone, MessageSquare, Send, CheckCircle, MapPin, FileQuestionIcon, Chrome } from 'lucide-react';
 
 // New component for the left-side contact information
 const ContactInfo = () => {
   const contactPoints = [
-    {
-      icon: MapPin,
-      title: 'Noida Office',
-      details: 'Highway Towers- Tower 1, Ground Floor A13/2,3,4 Sec 62 Noida (U.P) 201301 (Delhi NCR)',
-    },
+    // {
+    //   icon: MapPin,
+    //   title: 'Noida Office',
+    //   details: 'Highway Towers- Tower 1, Ground Floor A13/2,3,4 Sec 62 Noida (U.P) 201301 (Delhi NCR)',
+    // },
     {
       icon: MapPin,
       title: 'Mohali Office',
@@ -29,23 +29,23 @@ const ContactInfo = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'info@whizconsulting.net',
+      details: 'info@consulting.net',
     },
     {
-      icon: Mail,
-      title: 'Email Us',
-      details: 'info@whizconsulting.net',
+      icon: Chrome,
+      title: 'website',
+      details: 'https://accounting.net',
     },
     {
-      icon: Mail,
-      title: 'Email Us',
-      details: 'info@whizconsulting.net',
+      icon: FileQuestionIcon,
+      title: 'Opening Hours',
+      details: '9AM - 6PM (Mon - Sat)',
     },
   ];
 
   return (
     <motion.div
-      className="space-y-8 w-full"
+      className="space-y-10 w-full"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

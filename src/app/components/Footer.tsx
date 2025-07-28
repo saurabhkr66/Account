@@ -1,6 +1,7 @@
 'use client';
 
 import { Mail, Phone, MapPin, X, Linkedin, Facebook, Instagram, MessageSquare } from 'lucide-react';
+import Link from 'next/link';
 
 // A simple SVG component for the logo to match the design
 const TeklumeLogo = () => (
@@ -10,7 +11,9 @@ const TeklumeLogo = () => (
       <path d="M16 4.5L27.5 16L16 27.5L4.5 16L16 4.5Z" fill="#8B5CF6"/>
       <path d="M16 9L23 16L16 23L9 16L16 9Z" fill="white"/>
     </svg>
-    <span className="text-3xl font-bold bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">Account</span>
+    <Link href="/" className="text-3xl font-bold text-gradient bg-gradient-to-r from-sky-500 to-blue-400 bg-clip-text text-transparent">
+    <span className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 cursor-pointer  bg-clip-text text-transparent">Account</span>
+    </Link>
   </div>
 );
 

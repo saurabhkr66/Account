@@ -246,7 +246,7 @@ export default function ServicesSection() {
       document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
     }
   }}
-  className={`flex-1 bg-gradient-to-r ${service.gradient} hover:${service.hoverGradient} hover:shadow-lg text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg ${service.comingSoon ? 'opacity-50 cursor-not-allowed' : ''}`}
+  className={`flex-1 bg-gradient-to-r ${service.gradient} hover:${service.hoverGradient} cursor-pointer hover:shadow-lg text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg ${service.comingSoon ? 'opacity-50 cursor-not-allowed' : ''}`}
   disabled={service.comingSoon}
 >
   {service.comingSoon ? "Notify Me" : "Get Started"}
