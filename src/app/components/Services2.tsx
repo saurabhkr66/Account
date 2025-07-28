@@ -181,7 +181,7 @@ export default function ServicesSection() {
               >
                 <div className={`relative group ${service.comingSoon ? "opacity-90" : ""}`}>
                   {/* Glow Effect */}
-                  <div className={`absolute -inset-0.5 bg-gradient-to-r ${service.gradient} rounded-3xl blur opacity-0 group-hover:opacity-30 transition duration-1000`}></div>
+                  {/* <div className={`absolute -inset-0.5 bg-gradient-to-r ${service.gradient} rounded-3xl blur opacity-0 group-hover:opacity-30 transition duration-1000`}></div> */}
                   
                   <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl border-2 border-gray-200/50 shadow-xl overflow-hidden transition-all duration-500 group-hover:-translate-y-3 group-hover:shadow-2xl group-hover:shadow-gray-200/60">
                     {service.comingSoon && (
