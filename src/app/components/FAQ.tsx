@@ -4,9 +4,9 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Card } from "@/components/ui/card"
-import { ChevronDown, ChevronUp, Star, Sparkles } from "lucide-react"
+import { ChevronDown, ChevronUp, Star, Sparkles, HelpCircle } from "lucide-react"
 import Image from "next/image"
-
+import Link from "next/link"
 const faqs = [
   {
     question: "What is the difference between your bookkeeping and accounting services?",
@@ -77,7 +77,7 @@ export default function FaqSection() {
                 {/* You can replace this with an actual image */}
                 <div className="bg-white/50 backdrop-blur-sm rounded-xl p-8 text-center">
                   <div className="w-24 h-24 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Star className="w-12 h-12 text-white" />
+                    <HelpCircle className="w-12 h-12 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">
                     Still have questions?
@@ -85,9 +85,13 @@ export default function FaqSection() {
                   <p className="text-gray-600 mb-4">
                     Our team is here to help you with any additional inquiries.
                   </p>
-                  <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all">
+                  <Link href="#contact" className="text-blue-600 cursor-pointer hover:underline">
+                  <button 
+                 
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600  cursor-pointer text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all">
                     Contact Us
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>

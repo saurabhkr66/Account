@@ -146,7 +146,7 @@ export default function Testimonial() {
         </motion.div>
 
         {/* Enhanced Statistics Bar */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -194,7 +194,7 @@ export default function Testimonial() {
               </div>
             </div>
           </motion.div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Enhanced Testimonial Card */}
         <div className="relative">

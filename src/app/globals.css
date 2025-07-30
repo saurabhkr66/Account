@@ -120,3 +120,58 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/* Custom utility classes */
+@layer utilities {
+  .text-primary {
+    color: var(--primary);
+  }
+  
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  
+  .text-high {
+    color: var(--text-high);
+  }
+  
+  .text-medium {
+    color: var(--text-medium);
+  }
+  
+  .text-low {
+    color: var(--text-low);
+  }
+  
+  .bg-blue-light-1 {
+    background-color: var(--blue-light-1);
+  }
+  
+  .bg-blue-light-2 {
+    background-color: var(--blue-light-2);
+  }
+  
+  .bg-blue-light-3 {
+    background-color: var(--blue-light-3);
+  }
+  
+  .bg-blue-light-4 {
+    background-color: var(--blue-light-4);
+  }
+  @keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease forwards;
+}
+
+}

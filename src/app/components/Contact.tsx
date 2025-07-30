@@ -95,7 +95,7 @@ export default function ContactUs() {
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Get in <span className="bg-gradient-to-r from-sky-400 to-blue-400 bg-clip-text text-transparent">Touch</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-black max-w-2xl mx-auto">
             Ready to transform your business? Let's start the conversation.
           </p>
         </motion.div>
@@ -115,13 +115,13 @@ export default function ContactUs() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-rose-800 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+<div className="bg-gradient-to-r from-[#211F36] to-[#4a2a58] rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                   Transform Your Business with 
                   <span className="bg-gradient-to-r from-sky-300 to-blue-300 bg-clip-text text-transparent"> Expert Care</span>
                 </h2>
-                <p className="text-violet-200 mb-8 text-lg">
+                <p className="text-violet-100 mb-8 text-lg">
                   Join thousands of business owners who trust us to manage their finances and drive growth.
                 </p>
 

@@ -1,228 +1,249 @@
-import React, { useState, useEffect } from 'react';
-import { Calculator, BarChart3, Shield, FileText, PieChart, TrendingUp, Sparkles, Star } from 'lucide-react';
+import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
-const Card = ({ children, className, ...props }) => (
-  <div className={`bg-white rounded-lg shadow-md ${className}`} {...props}>
-    {children}
-  </div>
-);
-
-const CardHeader = ({ children, className, ...props }) => (
-  <div className={`p-6 ${className}`} {...props}>
-    {children}
-  </div>
-);
-
-const CardTitle = ({ children, className, ...props }) => (
-  <h3 className={`text-xl font-semibold ${className}`} {...props}>
-    {children}
-  </h3>
-);
-
-const CardDescription = ({ children, className, ...props }) => (
-  <p className={`text-gray-600 mt-2 ${className}`} {...props}>
-    {children}
-  </p>
-);
-
-const CardContent = ({ children, className, ...props }) => (
-  <div className={`px-6 pb-6 ${className}`} {...props}>
-    {children}
-  </div>
-);
-
-const AnimatedServicesSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const services = [
-    {
-      icon: Calculator,
-      title: "Daily Transaction Recording",
-      description: "Meticulous recording of all business transactions with proper categorization and documentation.",
-      features: ["Real-time entry", "Digital receipt management", "Automated categorization"],
-    },
-    {
-      icon: BarChart3,
-      title: "Financial Statements",
-      description: "Comprehensive monthly and quarterly financial reports including P&L, balance sheets, and cash flow.",
-      features: ["Monthly P&L statements", "Balance sheet preparation", "Cash flow analysis"],
-    },
-    {
-      icon: Shield,
-      title: "Bank Reconciliation",
-      description: "Regular reconciliation of all bank accounts to ensure accuracy and identify discrepancies.",
-      features: ["Monthly reconciliation", "Error identification", "Variance analysis"],
-    },
-    {
-      icon: FileText,
-      title: "Accounts Management",
-      description: "Complete management of accounts payable and receivable for optimal cash flow.",
-      features: ["Invoice tracking", "Payment scheduling", "Aging reports"],
-    },
-    {
-      icon: PieChart,
-      title: "GST Compliance",
-      description: "Comprehensive GST bookkeeping and reporting to ensure full compliance with regulations.",
-      features: ["GST calculations", "Return preparation", "Compliance monitoring"],
-    },
-    {
-      icon: TrendingUp,
-      title: "Financial Analysis",
-      description: "In-depth analysis of financial data to provide insights for business growth and decision-making.",
-      features: ["Trend analysis", "Performance metrics", "Growth insights"],
-    },
-  ];
-
+export default function BookkeepingLanding() {
   return (
-    <section className="relative bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/50 py-20 px-4 overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-indigo-400/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-indigo-400/10 to-purple-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-full blur-3xl animate-pulse delay-500"></div>
-      </div>
-
-      {/* Floating particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(15)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${3 + Math.random() * 2}s`,
-            }}
-          >
-            <div className="w-1 h-1 bg-blue-400/60 rounded-full"></div>
-          </div>
-        ))}
-      </div>
-
-      <div className="relative max-w-7xl mx-auto">
-        {/* Header */}
-        <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50/80 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
-            <Star className="w-4 h-4 text-blue-600 animate-pulse" />
-            <span className="text-sm font-medium text-blue-700">Premium Services</span>
-            <Sparkles className="w-4 h-4 text-blue-600 animate-pulse delay-300" />
-          </div>
-          
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-900 bg-clip-text text-transparent mb-6">
-            Comprehensive Bookkeeping Services
-          </h2>
-          
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From daily transaction recording to advanced financial analysis, we provide end-to-end bookkeeping
-            solutions tailored to your business needs.
-          </p>
-          
-          <div className="mt-6 w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto rounded-full animate-pulse"></div>
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-            
-            return (
-              <Card
-                key={index}
-                className={`group relative bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 shadow-lg overflow-hidden transform ${
-                  isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                {/* Glowing border effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
-                
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-indigo-50/0 group-hover:from-blue-50/50 group-hover:to-indigo-50/30 transition-all duration-500"></div>
-                
-                {/* Animated corner decoration */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 transform rotate-45 translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-500"></div>
-                
-                <CardHeader className="relative">
-                  <div className="relative mb-4">
-                    {/* Icon glow effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-                    
-                    <div className="relative h-12 w-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg">
-                      <IconComponent className="h-6 w-6 text-white" />
-                    </div>
-                  </div>
-                  
-                  <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                    {service.title}
-                  </CardTitle>
-                  
-                  <CardDescription className="text-gray-600 leading-relaxed">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                
-                <CardContent className="relative">
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li 
-                        key={featureIndex} 
-                        className={`flex items-center text-sm text-gray-600 transform transition-all duration-300 group-hover:translate-x-1`}
-                        style={{ transitionDelay: `${featureIndex * 50}ms` }}
-                      >
-                        <div className="h-1.5 w-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full mr-3 flex-shrink-0 group-hover:scale-150 transition-transform duration-300" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  {/* Subtle hover indicator */}
-                  <div className="mt-4 flex items-center text-sm font-medium text-blue-600 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:translate-x-2">
-                    <span>Explore service</span>
-                    <div className="ml-2 w-4 h-4 bg-blue-100 rounded-full flex items-center justify-center">
-                      <div className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-pulse"></div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className={`text-center mt-16 transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:from-blue-700 hover:to-indigo-700">
-            <span>Get Started Today</span>
-            <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative pt-30 min-h-screen overflow-hidden bg-gradient-to-r from-[#211F36] to-[#4a2a58] text-white">
+        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=800&width=1200')] opacity-10"></div>
+        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+                  Transform Your <span className="text-purple-200">Finances</span> into Success
+                </h1>
+                <p className="text-lg text-purple-100 sm:text-xl lg:text-2xl max-w-2xl">
+                  Professional bookkeeping services that keep your business organized, compliant, and profitable. From
+                  daily transactions to financial reporting, we handle it all.
+                </p>
+              </div>
+              <div className="flex flex-col gap-4 sm:flex-row">
+                <Button size="lg" className="bg-white text-purple-700 hover:bg-purple-50 font-semibold px-8 py-3">
+                  Get Free Consultation
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-purple-700 font-semibold px-8 py-3 bg-transparent"
+                >
+                  View Services
+                </Button>
+              </div>
+            </div>
+            <div className="relative">
+              <Image
+                src="/3.png"
+                alt="Financial Dashboard Illustration"
+                width={600}
+                height={500}
+                className="w-full h-auto"
+              />
             </div>
           </div>
-          <p className="text-gray-600 mt-3 text-sm">
-            Ready to streamline your bookkeeping? Contact us for a free consultation.
-          </p>
         </div>
-      </div>
+      </section>
 
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-15px) rotate(180deg);
-          }
-        }
-        
-        .animate-float {
-          animation: float 4s ease-in-out infinite;
-        }
-      `}</style>
-    </section>
-  );
-};
+      {/* Service Section 1 */}
+      <section className="py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+            <div className="relative order-2 lg:order-1">
+              <Image
+                src="/placeholder.svg?height=400&width=500"
+                alt="Organized Bookkeeping Workspace"
+                width={500}
+                height={400}
+                className="w-full h-auto rounded-2xl shadow-lg"
+              />
+            </div>
+            <div className="space-y-6 order-1 lg:order-2">
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  Daily Transaction Management
+                </h2>
+                <p className="text-lg text-gray-600">
+                  Keep your books up-to-date with our daily transaction recording services. We categorize expenses,
+                  track income, and ensure every penny is accounted for with precision and accuracy.
+                </p>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-3">
+                  <div className="h-2 w-2 rounded-full bg-purple-600"></div>
+                  <span className="text-gray-700">Receipt and invoice processing</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="h-2 w-2 rounded-full bg-purple-600"></div>
+                  <span className="text-gray-700">Bank reconciliation</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="h-2 w-2 rounded-full bg-purple-600"></div>
+                  <span className="text-gray-700">Expense categorization</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-export default AnimatedServicesSection;
+      {/* Service Section 2 */}
+      <section className="py-16 sm:py-24 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  Financial Reporting & Analysis
+                </h2>
+                <p className="text-lg text-gray-600">
+                  Get clear insights into your business performance with comprehensive financial reports. Monthly
+                  statements, profit & loss analysis, and cash flow projections delivered on time, every time.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <div className="text-2xl font-bold text-purple-600">99%</div>
+                  <div className="text-sm text-gray-600">Accuracy Rate</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-2xl font-bold text-purple-600">24h</div>
+                  <div className="text-sm text-gray-600">Report Turnaround</div>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <Image
+                src="/placeholder.svg?height=400&width=500"
+                alt="Financial Reports and Analytics"
+                width={500}
+                height={400}
+                className="w-full h-auto rounded-2xl shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Section 3 */}
+      <section className="py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+            <div className="relative order-2 lg:order-1">
+              <div className="absolute -top-4 -left-4 h-24 w-24 rounded-full bg-purple-100"></div>
+              <Image
+                src="/placeholder.svg?height=400&width=500"
+                alt="Tax Preparation and Compliance"
+                width={500}
+                height={400}
+                className="relative w-full h-auto rounded-2xl shadow-lg"
+              />
+            </div>
+            <div className="space-y-6 order-1 lg:order-2">
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  Tax Preparation & Compliance
+                </h2>
+                <p className="text-lg text-gray-600">
+                  Stay compliant and maximize your deductions with our comprehensive tax preparation services. We handle
+                  quarterly filings, annual returns, and keep you prepared for audits year-round.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 h-6 w-6 rounded-full bg-purple-600 flex items-center justify-center">
+                    <div className="h-2 w-2 rounded-full bg-white"></div>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Quarterly Tax Filings</h3>
+                    <p className="text-gray-600">Never miss a deadline with our automated filing system</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 h-6 w-6 rounded-full bg-purple-600 flex items-center justify-center">
+                    <div className="h-2 w-2 rounded-full bg-white"></div>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Deduction Optimization</h3>
+                    <p className="text-gray-600">Maximize your savings with expert deduction strategies</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gradient-to-r from-[#211F36] to-[#4a2a58] text-white py-16 sm:py-24">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+                Ready to Streamline Your Finances?
+              </h2>
+              <p className="text-lg text-purple-100 sm:text-xl max-w-2xl mx-auto">
+                Join hundreds of businesses who trust us with their bookkeeping. Get started with a free consultation
+                and see the difference professional bookkeeping makes.
+              </p>
+            </div>
+            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+              <Button size="lg" className="bg-white text-purple-700 hover:bg-purple-50 font-semibold px-8 py-3">
+                Schedule Free Consultation
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-purple-700 font-semibold px-8 py-3 bg-transparent"
+              >
+                Call (555) 123-4567
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      {/* <footer className="bg-gray-900 text-white py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8 md:grid-cols-4">
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">BookKeep Pro</h3>
+              <p className="text-gray-400">Professional bookkeeping services for growing businesses.</p>
+            </div>
+            <div className="space-y-4">
+              <h4 className="font-semibold">Services</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li>Daily Bookkeeping</li>
+                <li>Financial Reporting</li>
+                <li>Tax Preparation</li>
+                <li>Payroll Services</li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h4 className="font-semibold">Company</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li>About Us</li>
+                <li>Our Team</li>
+                <li>Careers</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h4 className="font-semibold">Contact</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li>hello@bookkeeppro.com</li>
+                <li>(555) 123-4567</li>
+                <li>123 Business Ave</li>
+                <li>Suite 100, City, ST 12345</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+            <p>&copy; 2024 BookKeep Pro. All rights reserved.</p>
+          </div>
+        </div>
+      </footer> */}
+    </div>
+  )
+}

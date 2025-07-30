@@ -20,31 +20,42 @@ const services = [
     description:
       "Advanced remote accounting services to streamline processes for seamless efficiency and accuracy.",
   },
-  {
-    title: "Enterprise Solutions",
+{
+    title: "Individual Services",
     description:
-      "Comprehensive accounting services with dedicated support for large-scale operations and compliance.",
+      "Personalized budgeting, tax planning, and wealth management solutions designed to help individuals take control of their finances.",
   },
 ];
 
 // Reusable Card Component with increased width
-const ServiceCard = ({ title, description }) => (
-  <div className="flex h-[360px] w-full max-w-sm flex-col justify-between rounded-2xl bg-slate-100/80 p-8 text-center transition-all duration-300 hover:bg-white hover:shadow-2xl hover:-translate-y-2">
-    <div>
-      <h3 className="text-2xl font-bold text-gray-800">{title}</h3>
-      <p className="mt-4 text-gray-600 text-lg leading-relaxed">{description}</p>
-    </div>
-    <motion.a
-      href="#"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      className="group mt-6 inline-flex items-center justify-center self-center rounded-lg bg-gradient-to-r from-sky-400 to-blue-400 px-8 py-3 text-lg font-bold text-white shadow-lg transition-transform duration-300"
+
+
+const ServiceCard = ({ title, description, delay = 0 }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay }}
+      whileHover={{ y: -12, scale: 1.02 }}
+      className="group"
     >
-      View Pricing
-      <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-    </motion.a>
-  </div>
-);
+      <div className="h-[360px] w-full max-w-sm bg-white/80 backdrop-blur-sm shadow-xl border-2 border-gray-200/50 overflow-hidden rounded-2xl p-8 flex flex-col justify-between transition-all duration-700">
+        <div>
+          <h3 className="text-2xl font-bold text-gray-800 mb-4">{title}</h3>
+          <div className="w-12 h-1 bg-gradient-to-r from-sky-400 to-blue-500 rounded-full mb-4"></div>
+          <p className=" pt-1 text-gray-600 leading-relaxed  text-lg flex-1">{description}</p>
+        </div>
+
+        <div className="mt-6 inline-flex items-center bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent font-semibold text-md">
+          <span className="mr-2">View Pricing</span>
+          <ArrowRight className="w-4 h-4 text-sky-500 group-hover:translate-x-1 transition-transform duration-300" />
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
 
 // Main Section Component
 export default function WhoWeServe() {
