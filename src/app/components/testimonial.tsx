@@ -140,61 +140,12 @@ export default function Testimonial() {
 
           {/* Enhanced Subtitle */}
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover how we've transformed businesses with our expert accounting solutions and 
+            Discover how we have transformed businesses with our expert accounting solutions and 
             <span className="text-sky-600 font-semibold"> exceptional service</span>
           </p>
         </motion.div>
 
-        {/* Enhanced Statistics Bar */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex justify-center items-center gap-8 mb-16 flex-wrap"
-        >
-          <motion.div
-            whileHover={{ scale: 1.05, y: -5 }}
-            className="text-center group"
-          >
-            <div className="relative">
-              <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 to-blue-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6  border-2 border-gray-200/50 group-hover:border-sky-200/70 transition-all duration-300">
-                <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">500+</div>
-                <div className="text-sm text-gray-600 font-medium">Happy Clients</div>
-              </div>
-            </div>
-          </motion.div>
-          
-          <div className="w-px h-12 bg-gray-300"></div>
-          
-          <motion.div
-            whileHover={{ scale: 1.05, y: -5 }}
-            className="text-center group"
-          >
-            <div className="relative">
-              <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 to-blue-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-gray-200/50 group-hover:border-blue-200/70 transition-all duration-300">
-                <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">4.9/5</div>
-                <div className="text-sm text-gray-600 font-medium">Average Rating</div>
-              </div>
-            </div>
-          </motion.div>
-          
-          <div className="w-px h-12 bg-gray-300"></div>
-          
-          <motion.div
-            whileHover={{ scale: 1.05, y: -5 }}
-            className="text-center group"
-          >
-            <div className="relative">
-              <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 to-blue-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-gray-200/50 group-hover:border-indigo-200/70 transition-all duration-300">
-                <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">99%</div>
-                <div className="text-sm text-gray-600 font-medium">Satisfaction Rate</div>
-              </div>
-            </div>
-          </motion.div>
-        </motion.div> */}
+       
 
         {/* Enhanced Testimonial Card */}
         <div className="relative">
@@ -265,13 +216,14 @@ export default function Testimonial() {
                     </div>
 
                     {/* Enhanced Testimonial Text */}
-                    <blockquote className="text-gray-700 text-xl md:text-2xl leading-relaxed font-medium relative">
-                      <span className="text-sky-400 text-6xl font-serif absolute -top-4 -left-2 opacity-50">"</span>
-                      <span className="relative z-10 block pl-8">
-                        {currentTestimonial.text}
-                      </span>
-                      <span className="text-indigo-600 text-6xl font-serif absolute -bottom-8 -right-2 opacity-50">"</span>
-                    </blockquote>
+                   <blockquote className="text-gray-700 text-xl md:text-2xl leading-relaxed font-medium relative">
+  <span className="text-sky-400 text-6xl font-serif absolute -top-4 -left-2 opacity-50">{"\""}</span>
+  <span className="relative z-10 block pl-8">
+    {currentTestimonial.text}
+  </span>
+  <span className="text-indigo-600 text-6xl font-serif absolute -bottom-8 -right-2 opacity-50">{"\""}</span>
+</blockquote>
+
                   </div>
                 </div>
               </motion.div>

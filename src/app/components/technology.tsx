@@ -62,7 +62,7 @@ export default function Technology() {
       <div className="max-w-6xl mx-auto">
         <p className="text-gray-500 dark:text-gray-400 text-sm mb-2">Innovation and Delight</p>
         <h2 className="text-3xl md:text-5xl font-bold mb-6 dark:text-white">
-          Account's <span className="bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent dark:text-blue-400">Feature Snapshots</span>
+          Account&apos;s <span className="bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent dark:text-blue-400">Feature Snapshots</span>
         </h2>
 
         {/* Tabs */}

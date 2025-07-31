@@ -1,24 +1,23 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Calculator, Shield, Clock, TrendingUp, Users, Award, CheckCircle, ArrowRight, Sparkles, Star } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function Component() {
-  const [isVisible, setIsVisible] = useState(false)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  // const [isVisible, setIsVisible] = useState(false)
+  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
-  useEffect(() => {
-    setIsVisible(true)
+  // useEffect(() => {
+  //   setIsVisible(true)
     
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
+  //   const handleMouseMove = (e: MouseEvent) => {
+  //     setMousePosition({ x: e.clientX, y: e.clientY })
+  //   }
     
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
+  //   window.addEventListener('mousemove', handleMouseMove)
+  //   return () => window.removeEventListener('mousemove', handleMouseMove)
+  // }, [])
 
   const features = [
     {

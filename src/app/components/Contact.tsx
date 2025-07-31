@@ -96,7 +96,7 @@ export default function ContactUs() {
             Get in <span className="bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">Touch</span>
           </h1>
           <p className="text-xl text-black max-w-2xl mx-auto">
-            Ready to transform your business? Let's start the conversation.
+<p>Ready to transform your business? Let&apos;s start the conversation.</p>
           </p>
         </motion.div>
 

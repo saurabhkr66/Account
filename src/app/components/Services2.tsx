@@ -156,9 +156,8 @@ export default function ServicesSection() {
 
         {/* Enhanced Grid */}
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-8xl mx-auto">
-          {services.map((service, index) => {
+          {services.map((service) => {
             const Icon = service.icon
-            const isLeft = index % 2 === 0
 
 
 const fadeVariant: Variants = {
