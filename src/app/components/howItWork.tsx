@@ -99,10 +99,11 @@ export default function WhoWeServe() {
           </p>
         </div>
 
-        <motion.div
-          className="mx-auto px-48 mt-12 grid max-w-8xl gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 place-items-center"
-          variants={containerVariants}
-        >
+      <motion.div
+  className="mx-auto px-4 sm:px-8 md:px-12 lg:px-24 xl:px-32 2xl:px-48 mt-12 grid gap-8 grid-cols-1 sm:grid-cols-1 xl:grid-cols-4 place-items-center"
+  variants={containerVariants}
+>
+
           {services.map((service, index) => (
             <motion.div key={`${service.title}-${index}`} variants={itemVariants}>
               <ServiceCard {...service} />

@@ -1,4 +1,3 @@
-// FaqSection.tsx
 "use client"
 
 import { useState } from "react"
@@ -6,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Card } from "@/components/ui/card"
 import { ChevronDown, ChevronUp, Star, Sparkles, HelpCircle } from "lucide-react"
 import Link from "next/link"
+
 const faqs = [
   {
     question: "What is the difference between your bookkeeping and accounting services?",
@@ -44,52 +44,47 @@ export default function FaqSection() {
   const toggleFaq = (index: number) => setOpenFaq(openFaq === index ? null : index)
 
   return (
-    <section className="py-24 px-4 ">
+    <section className="py-16 px-4 md:py-24">
       <div className="container mx-auto max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           
-          {/* Left Side - Header and Image */}
+          {/* Left Side */}
           <div className="space-y-8">
             <div className="text-center lg:text-left">
-              <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-cyan-100/80 to-cyan-100/80 border-2 border-cyan-200/50 backdrop-blur-sm rounded-full mb-6">
+              <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-gradient-to-r from-cyan-100/80 to-cyan-100/80 border border-cyan-200/50 backdrop-blur-sm rounded-full mb-6">
                 <Star className="w-4 h-4 text-cyan-600" />
-                <span className="text-cyan-700 font-semibold">FAQ</span>
+                <span className="text-cyan-700 font-semibold text-sm">FAQ</span>
                 <Sparkles className="w-4 h-4 text-cyan-600" />
               </div>
-              
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6">
-                Frequently Asked
-                <br />
+
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-800 leading-snug mb-4">
+                Frequently Asked <br />
                 <span className="bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">
                   Questions
                 </span>
               </h2>
-              
-              <p className="text-gray-600 text-lg max-w-xl mx-auto lg:mx-0">
+
+              <p className="text-gray-600 text-base md:text-lg max-w-xl mx-auto lg:mx-0">
                 Get answers to the most common inquiries about our services and support.
               </p>
             </div>
 
-            {/* Image/Illustration */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-cyan-100 to-blue-200 rounded-2xl p-8 lg:p-12">
-                {/* You can replace this with an actual image */}
-                <div className="bg-white/50 backdrop-blur-sm rounded-xl p-8 text-center">
-                  <div className="w-24 h-24 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <HelpCircle className="w-12 h-12 text-white" />
+              <div className="bg-gradient-to-br from-cyan-100 to-blue-200 rounded-2xl p-6 md:p-10">
+                <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 text-center">
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <HelpCircle className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
                     Still have questions?
                   </h3>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-600 mb-4 text-sm md:text-base">
                     Our team is here to help you with any additional inquiries.
                   </p>
-                  <Link href="#contact" className="text-blue-600 cursor-pointer hover:underline">
-                  <button 
-                 
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600  cursor-pointer text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all">
-                    Contact Us
-                  </button>
+                  <Link href="#contact">
+                    <button className="w-full sm:w-auto bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all text-sm md:text-base">
+                      Contact Us
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -97,7 +92,7 @@ export default function FaqSection() {
           </div>
 
           {/* Right Side - FAQ List */}
-          <div className="space-y-4 pt-18 ">
+          <div className="space-y-4">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
@@ -105,12 +100,12 @@ export default function FaqSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="bg-white/80 backdrop-blur-sm border-2 border-gray-200/50 shadow hover:shadow-md transition-all">
+                <Card className="bg-white/80 backdrop-blur-sm border border-gray-200/50 shadow hover:shadow-md transition-all">
                   <button
                     onClick={() => toggleFaq(index)}
-                    className="w-full px-6 py-1  flex justify-between items-center text-left hover:bg-emerald-50/30"
+                    className="w-full px-4 md:px-6 py-3 flex justify-between items-center text-left hover:bg-emerald-50/30"
                   >
-                    <span className="text-lg font-medium text-gray-800 pr-4">
+                    <span className="text-base md:text-lg font-medium text-gray-800 pr-4">
                       {faq.question}
                     </span>
                     {openFaq === index ? (
@@ -126,9 +121,9 @@ export default function FaqSection() {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="px-6 pb-4"
+                        className="px-4 md:px-6 pb-4"
                       >
-                        <p className="text-gray-600 text-base pt-2">
+                        <p className="text-gray-600 text-sm md:text-base pt-2">
                           {faq.answer}
                         </p>
                       </motion.div>
