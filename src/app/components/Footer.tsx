@@ -42,7 +42,7 @@ export default function Footer() {
   return (
     <footer className="bg-white text-gray-700 py-10 font-sans border-t border-gray-200">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 justify-around text-center md:text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-around text-center md:text-left">
           
           {/* Column 1: Logo, Tagline, Socials */}
           <div className="flex flex-col items-center md:items-start lg:col-span-2">

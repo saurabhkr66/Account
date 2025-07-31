@@ -95,8 +95,8 @@ export default function ContactUs() {
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Get in <span className="bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">Touch</span>
           </h1>
-          <p className="text-xl text-black max-w-2xl mx-auto">
-<p>Ready to transform your business? Let&apos;s start the conversation.</p>
+          < p className="text-xl text-black max-w-2xl mx-auto">
+Ready to transform your business? Let&apos;s start the conversation.
           </p>
         </motion.div>
 

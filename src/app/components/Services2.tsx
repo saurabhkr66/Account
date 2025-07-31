@@ -155,7 +155,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Enhanced Grid */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-8xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-8xl mx-auto">
           {services.map((service) => {
             const Icon = service.icon
 

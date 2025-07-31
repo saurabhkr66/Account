@@ -148,7 +148,7 @@ export default function Component() {
         </motion.div>
 
         {/* Enhanced Features Grid - HOVER EFFECTS REMOVED */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-20">
           {features.map((feature, index) => (
             <motion.div
               key={index}

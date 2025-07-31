@@ -100,7 +100,7 @@ export default function WhoWeServe() {
         </div>
 
       <motion.div
-  className="mx-auto px-4 sm:px-8 md:px-12 lg:px-24 xl:px-32 2xl:px-48 mt-12 grid gap-8 grid-cols-1 sm:grid-cols-1 xl:grid-cols-4 place-items-center"
+  className="mx-auto px-4 sm:px-8 md:px-12 lg:px-24 xl:px-32 2xl:px-48 mt-12 grid gap-8 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 place-items-center"
   variants={containerVariants}
 >
 
