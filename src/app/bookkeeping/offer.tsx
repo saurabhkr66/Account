@@ -35,11 +35,11 @@ Our Outsourced Bookkeeping Services Include           </h2>
               </div>
             </div>
             <Image
-  src="https://www.whizconsulting.net/in/wp-content/uploads/2025/03/H1s-3.png" // Replace with your image path (e.g. public/your-image.jpg)
+  src="/services.jpg" // Replace with your image path (e.g. public/your-image.jpg)
   alt="Illustration of finance tools"
-  width={1200} // Adjust width
-  height={320} // Adjust height
-  className="rounded-3xl object-cover w-full "
+  width={600} // Adjust width
+  height={100} // Adjust height
+  className="rounded-3xl object-cover "
 />
           </div>
         </div>

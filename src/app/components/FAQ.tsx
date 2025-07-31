@@ -5,7 +5,6 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Card } from "@/components/ui/card"
 import { ChevronDown, ChevronUp, Star, Sparkles, HelpCircle } from "lucide-react"
-import Image from "next/image"
 import Link from "next/link"
 const faqs = [
   {

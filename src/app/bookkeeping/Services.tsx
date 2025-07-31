@@ -1,14 +1,6 @@
 import React from 'react'
-import {
-  CheckCircle,
-  ArrowRight,
-  Sparkles,
-  TrendingUp,
-  Users,
-  FileText,
-  Calendar,
-  Target,
-} from 'lucide-react'
+
+import Image from 'next/image';
 
 function Services() {
   return (
@@ -31,13 +23,20 @@ function Services() {
 
         {/* Right Video Section */}
     <div className="w-[800px] h-[450px]">
-  <iframe
+  {/* <iframe
     className="w-full h-full rounded-xl shadow-lg"
     src="/whiz-intro-video.mp4"
     title="Bookkeeping Services Overview"
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
+  /> */}
+  <Image
+    src="/challanges.jpg" // Replace with your image path (e.g. public/your-image.jpg)
+    alt="Illustration of finance tools"
+    width={1200} // Adjust width
+    height={320} // Adjust height
+    className="rounded-3xl object-cover w-full "
   />
 </div>
 

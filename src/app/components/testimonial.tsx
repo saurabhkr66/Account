@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, Quote, Star, Sparkles, Award, Users, CheckCircle, Clock } from "lucide-react"
+import { ChevronLeft, ChevronRight, Star, Sparkles, Award } from "lucide-react"
 
 const testimonials = [
   {

@@ -102,7 +102,7 @@ export default function Header() {
           ))}
           <button
             onClick={() => scrollToSection('contact')}
-            className="ml-4 bg-gradient-to-r from-sky-400 cursor-pointer c:\Users\saura\Downloads\ipc\5.jpgto-blue-400 text-white rounded-lg px-4 py-2 font-semibold shadow hover:scale-105 transition"
+            className="ml-4 bg-gradient-to-r from-sky-400 to-blue-400 cursor-pointer text-white rounded-lg px-4 py-2 font-semibold shadow hover:scale-105 transition"
           >
             Contact Us
           </button>

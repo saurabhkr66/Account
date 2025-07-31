@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { FC } from "react";
 
 // Data for the service cards
 const services = [
@@ -29,8 +30,13 @@ const services = [
 
 // Reusable Card Component with increased width
 
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  delay?: number;
+}
 
-const ServiceCard = ({ title, description, delay = 0 }) => {
+const ServiceCard: FC<ServiceCardProps> = ({ title, description, delay = 0 }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 60 }}
@@ -44,7 +50,7 @@ const ServiceCard = ({ title, description, delay = 0 }) => {
         <div>
           <h3 className="text-2xl font-bold text-gray-800 mb-4">{title}</h3>
           <div className="w-12 h-1 bg-gradient-to-r from-sky-400 to-blue-500 rounded-full mb-4"></div>
-          <p className=" pt-1 text-gray-600 leading-relaxed  text-lg flex-1">{description}</p>
+          <p className="pt-1 text-gray-600 leading-relaxed text-lg flex-1">{description}</p>
         </div>
 
         <div className="mt-6 inline-flex items-center bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent font-semibold text-md">

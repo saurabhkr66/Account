@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Calculator, Shield, Clock, TrendingUp, Users, Award, CheckCircle, ArrowRight, Sparkles, Star, Zap } from 'lucide-react'
-import { Button } from "@/components/ui/button"
+import { Calculator, Shield, Clock, TrendingUp, Users, Award, CheckCircle, ArrowRight, Sparkles, Star } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function Component() {
@@ -160,7 +159,7 @@ export default function Component() {
               whileHover={{ y: -12, scale: 1.02 }}
               className="group"
             >
-              <Card className="h-96 border-0 bg-white/80 backdrop-blur-sm shadow-xl transition-all duration-700 border-2 border-gray-200/50 overflow-hidden relative">
+              <Card className="h-96 bg-white/80 backdrop-blur-sm shadow-xl transition-all duration-700 border-2 border-gray-200/50 overflow-hidden relative">
                 <CardContent className="relative p-8 h-full flex flex-col">
                   {/* Icon - No Hover Effects */}
                   <div className="relative mb-6">

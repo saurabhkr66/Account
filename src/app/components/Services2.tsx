@@ -14,6 +14,8 @@ import {
   Star,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Variants } from "framer-motion"
+import Image from "next/image"
 
 
 export default function ServicesSection() {
@@ -158,18 +160,19 @@ export default function ServicesSection() {
             const Icon = service.icon
             const isLeft = index % 2 === 0
 
-            const fadeVariant = {
-              hidden: { opacity: 0, x: isLeft ? -60 : 60 },
-              visible: {
-                opacity: 1,
-                x: 0,
-                transition: {
-                  duration: 0.6,
-                  ease: "easeOut",
-                  delay: 0.05 * index,
-                },
-              },
-            }
+
+const fadeVariant: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut',
+    },
+  },
+};
+
 
             return (
               <motion.div
@@ -195,11 +198,13 @@ export default function ServicesSection() {
 
                     {/* Enhanced Image Section */}
                     <div className="relative overflow-hidden">
-                      <img
-                        src={service.image}
-                        alt={service.title}
-                        className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
+                     <Image
+  src={service.image}
+  alt={service.title}
+  width={800} // adjust as per your layout needs
+  height={256} // height: 64 x 4 (Tailwind's h-64 = 16rem = 256px)
+  className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+/>
                       <div className={`absolute inset-0 bg-gradient-to-t ${service.gradient} opacity-20 group-hover:opacity-30 transition-opacity duration-500`}></div>
                       
                       {/* Floating Icon */}

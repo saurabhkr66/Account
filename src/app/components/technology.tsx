@@ -2,9 +2,18 @@
 
 import { useState } from "react";
 
-const TABS = ["Accountants", "Auditors", "Entrepreneurs"];
+// Feature type
+type Feature = {
+  name: string;
+  color: string;
+};
 
-const FEATURES = {
+// Tabs as literal types
+const TABS = ["Accountants", "Auditors", "Entrepreneurs"] as const;
+type TabType = typeof TABS[number];
+
+// Features data with proper typing
+const FEATURES: Record<TabType, Feature[]> = {
   Accountants: [
     { name: "Cloud-Based Ledger", color: "bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300" },
     { name: "Automated GST Filing", color: "bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-300" },
@@ -45,9 +54,8 @@ const FEATURES = {
   ],
 };
 
-
 export default function Technology() {
-  const [activeTab, setActiveTab] = useState("Accountants");
+  const [activeTab, setActiveTab] = useState<TabType>("Accountants");
 
   return (
     <section className="bg-[#f8faff] dark:bg-black py-16 px-4 text-center">
@@ -63,9 +71,9 @@ export default function Technology() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-6 py-2 rounded-full font-medium  cursor-pointer transition ${
+              className={`px-6 py-2 rounded-full font-medium transition ${
                 activeTab === tab
-                  ? "bg-gradient-to-r from-sky-400 to-blue-500  text-white shadow"
+                  ? "bg-gradient-to-r from-sky-400 to-blue-500 text-white shadow"
                   : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
               }`}
             >

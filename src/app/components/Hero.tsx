@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 export default function LandingPage() {
   const images = ["/3.png", "/4.png", "/5.png", "/6.png"];
@@ -34,11 +35,14 @@ export default function LandingPage() {
                 <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-36 h-32 bg-purple-500/60 blur-2xl rounded-full z-0" />
               )}
 
-              <img
-                src={src}
-                alt={`Image ${index + 1}`}
-                className="max-h-[400px] mx-auto rounded-2xl shadow-xl object-cover relative z-10"
-              />
+             <Image
+  src={src}
+  alt={`Image ${index + 1}`}
+  height={400}
+  width={600}
+  className="max-h-[400px] mx-auto rounded-2xl shadow-xl object-cover relative z-10"
+/>
+
             </div>
           );
         })}
