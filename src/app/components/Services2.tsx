@@ -27,7 +27,7 @@ export default function ServicesSection() {
       icon: Calculator,
       image: "/accounting.jpg",
       features: ["Daily/monthly transaction tracking", "Financial statements & ledgers"],
-      gradient: "from-sky-400 to-blue-400 ",
+      gradient: "from-sky-400 to-blue-500 ",
       hoverGradient: "from-sky-400 to-blue-400",
     },
     {
@@ -37,7 +37,7 @@ export default function ServicesSection() {
       icon: FileText,
       image: "/invoice.png",
       features: ["Recurring & one-time invoice generation", "Payment tracking and reminders"],
-      gradient: "from-sky-400 to-blue-400 ",
+      gradient: "from-sky-400 to-blue-500 ",
       hoverGradient: "from-sky-400 to-blue-400",
     },
     {
@@ -47,7 +47,7 @@ export default function ServicesSection() {
       icon: Users,
       image: "/payroll.jpg",
       features: ["Salary calculations & payslip generation", "PF, ESI, TDS compliance and filing"],
-      gradient: "from-sky-400 to-blue-400 ",
+      gradient: "from-sky-400 to-blue-500 ",
       hoverGradient: "from-sky-400 to-blue-400",
     },
     {
@@ -57,7 +57,7 @@ export default function ServicesSection() {
       icon: DollarSign,
       image: "/acc.jpg",
       features: ["General ledger & journal entries", "Trial balance & year-end closure"],
-      gradient: "from-sky-400 to-blue-400 ",
+      gradient: "from-sky-400 to-blue-500 ",
       hoverGradient: "from-sky-400 to-blue-400",
     },
     {
@@ -67,7 +67,7 @@ export default function ServicesSection() {
       icon: Receipt,
       image: "/tax.jpg",
       features: ["GST registration, filing & IT returns", "Tax planning and consultancy"],
-      gradient: "from-sky-400 to-blue-400 ",
+      gradient: "from-sky-400 to-blue-500 ",
       hoverGradient: "from-sky-400 to-blue-400",
     },
     {
@@ -77,7 +77,7 @@ export default function ServicesSection() {
       icon: Building,
       image: "/mca.jpg",
       features: ["ROC filing & Director KYC", "Company incorporation & amendments"],
-      gradient: "from-sky-400 to-blue-400 ",
+      gradient: "from-sky-400 to-blue-500 ",
       hoverGradient: "from-sky-400 to-blue-400",
     },
     {
@@ -87,7 +87,7 @@ export default function ServicesSection() {
       icon: FileCheck,
       image: "/taximage.jpg",
       features: ["Audit support & financial certifications", "Registration for PAN, TAN, MSME, etc."],
-      gradient: "from-sky-400 to-blue-400 ",
+      gradient: "from-sky-400 to-blue-500 ",
       hoverGradient: "from-sky-400 to-blue-400",
     },
     {
@@ -97,7 +97,7 @@ export default function ServicesSection() {
       icon: Globe,
       image: "/foreign.jpg",
       features: ["Multi-currency bookkeeping & reporting", "Compliance with US, UK, UAE standards"],
-      gradient: "from-sky-400 to-blue-400 ",
+      gradient: "from-sky-400 to-blue-500 ",
       hoverGradient: "from-sky-400 to-blue-400",
       comingSoon: true,
     },

@@ -67,7 +67,7 @@ export default function Header() {
       <div className={`max-w-[104rem] mx-auto rounded-xl backdrop-blur-lg px-6 h-24 flex justify-between items-center border transition-all duration-500 ${styles.bg} ${styles.shadow}`}>
         <button
           onClick={() => scrollToSection('home')}
-          className="text-3xl flex flex-grid-2 cursor-pointer font-bold px-9 text-gradient bg-gradient-to-r from-sky-500 to-blue-400 bg-clip-text text-transparent"
+          className="text-3xl flex flex-grid-2 cursor-pointer font-bold px-9 text-gradient bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent"
         >
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 0L32 16L16 32L0 16L16 0Z" fill="#A78BFA" />
@@ -102,7 +102,7 @@ export default function Header() {
           ))}
           <button
             onClick={() => scrollToSection('contact')}
-            className="ml-4 bg-gradient-to-r from-sky-400 to-blue-400 cursor-pointer text-white rounded-lg px-4 py-2 font-semibold shadow hover:scale-105 transition"
+            className="ml-4 bg-gradient-to-r from-sky-400 to-blue-500 cursor-pointer text-white rounded-lg px-4 py-2 font-semibold shadow hover:scale-105 transition"
           >
             Contact Us
           </button>

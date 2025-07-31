@@ -93,7 +93,7 @@ export default function ContactUs() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Get in <span className="bg-gradient-to-r from-sky-400 to-blue-400 bg-clip-text text-transparent">Touch</span>
+            Get in <span className="bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">Touch</span>
           </h1>
           <p className="text-xl text-black max-w-2xl mx-auto">
             Ready to transform your business? Let's start the conversation.
@@ -179,7 +179,7 @@ export default function ContactUs() {
                   >
                     <motion.button
                       type="submit"
-                      className="w-full flex items-center justify-center space-x-2 rounded-xl bg-gradient-to-r from-sky-400 to-blue-400 px-6 py-4 text-lg font-semibold text-white shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-violet-800 transition-all duration-200 relative overflow-hidden group"
+                      className="w-full flex items-center justify-center space-x-2 rounded-xl bg-gradient-to-r from-sky-400 to-blue-500 px-6 py-4 text-lg font-semibold text-white shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-violet-800 transition-all duration-200 relative overflow-hidden group"
                       whileHover={{ scale: 1.02, y: -2 }}
                       whileTap={{ scale: 0.98 }}
                     >

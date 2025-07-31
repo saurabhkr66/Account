@@ -17,7 +17,7 @@ export default function Cta() {
         <div className="w-full pb-24 pt-24">
           <div className="relative block  max-w-7xl mx-auto">
             {/* Gradient background behind the card */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-sky-400  to-blue-400 rounded-3xl opacity-100"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-sky-400  to-blue-500 rounded-3xl opacity-100"></div>
 
             {/* Main card with padding and center text */}
             <div className="relative rounded-3xl p-12 text-white">
