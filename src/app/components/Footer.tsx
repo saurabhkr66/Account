@@ -1,16 +1,17 @@
 'use client';
 
-import { Mail, Phone, MapPin, X, Linkedin, Facebook, Instagram, MessageSquare } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import Link from 'next/link';
-import { ReactNode } from 'react';
+import { FaFacebook, FaWhatsapp,FaLinkedin, FaInstagram } from 'react-icons/fa';
 
-interface SocialIconProps {
-  href: string;
-  'aria-label': string;
-  children: ReactNode;
-}
 
-const TeklumeLogo = () => (
+// interface SocialIconProps {
+//   href: string;
+//   'aria-label': string;
+//   children: ReactNode;
+// }
+
+const Logo = () => (
   <div className="flex items-center gap-2">
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M16 0L32 16L16 32L0 16L16 0Z" fill="#A78BFA" />
@@ -19,7 +20,7 @@ const TeklumeLogo = () => (
     </svg>
     <Link
       href="/"
-      className="text-3xl font-bold text-gradient bg-gradient-to-r from-sky-500 to-blue-400 bg-clip-text text-transparent"
+      className="text-3xl font-bold text-gradient bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent"
     >
       <span className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 cursor-pointer bg-clip-text text-transparent">
         Account
@@ -28,15 +29,15 @@ const TeklumeLogo = () => (
   </div>
 );
 
-const SocialIcon = ({ href, 'aria-label': ariaLabel, children }: SocialIconProps) => (
-  <a
-    href={href}
-    aria-label={ariaLabel}
-    className="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md border border-gray-200/80 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-  >
-    {children}
-  </a>
-);
+// const SocialIcon = ({ href, 'aria-label': ariaLabel, children }: SocialIconProps) => (
+//   <a
+//     href={href}
+//     aria-label={ariaLabel}
+//     className="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md border border-gray-200/80 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+//   >
+//     {children}
+//   </a>
+// );
 
 export default function Footer() {
   return (
@@ -46,26 +47,27 @@ export default function Footer() {
           
           {/* Column 1: Logo, Tagline, Socials */}
           <div className="flex flex-col items-center md:items-start lg:col-span-2">
-            <TeklumeLogo />
+            <Logo />
             <p className="mt-4 text-gray-500 max-w-xs">
               Build Digital Solutions that scale
             </p>
-            <div className="flex justify-center md:justify-start space-x-3 mt-6">
-              <SocialIcon href="#" aria-label="X (formerly Twitter)">
-                <X className="w-5 h-5 text-gray-800" />
-              </SocialIcon>
-              <SocialIcon href="#" aria-label="LinkedIn">
-                <Linkedin className="w-5 h-5 text-blue-700" />
-              </SocialIcon>
-              <SocialIcon href="#" aria-label="Facebook">
-                <Facebook className="w-5 h-5 text-blue-600" />
-              </SocialIcon>
-              <SocialIcon href="#" aria-label="Instagram">
-                <Instagram className="w-5 h-5 text-pink-600" />
-              </SocialIcon>
-              <SocialIcon href="#" aria-label="WhatsApp">
-                <MessageSquare className="w-5 h-5 text-green-500" />
-              </SocialIcon>
+            <div className="flex justify-center md:justify-start space-x-5 mt-6">
+              <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="currentColor"
+  className="text-black text-3xl"
+>
+  <path d="M20.81 3H16.1l-3.12 4.17L9.33 3H3.19L9.89 12l-6.7 9h4.65l3.65-4.89L14.79 21h6.03L14.83 12l5.98-9zM16.8 4.5h2.15l-6.7 9 6.7 9h-2.16l-6.7-9 6.71-9z" />
+</svg>
+              <FaLinkedin className="text-3xl text-blue-600" />
+              <FaFacebook className="text-3xl text-blue-600" />
+              <FaInstagram className="text-3xl text-pink-600" />
+                
+              <FaWhatsapp className="text-green-500 text-3xl" />
+
             </div>
             <p className="text-sm text-gray-400 mt-8">
               © 2025 Account. All rights reserved.
@@ -74,40 +76,40 @@ export default function Footer() {
 
           {/* Column 2: Services */}
           <div>
-            <h3 className="text-lg font-semibold text-violet-600 mb-4">Services</h3>
+            <h3 className="text-lg font-semibold bg-gradient-to-b from-sky-400 to-blue-500 bg-clip-text text-transparent mb-4">Services</h3>
             <ul className="space-y-3 text-gray-600">
-              <li><a href="#" className="hover:text-violet-600 hover:underline">Invoice</a></li>
-              <li><a href="#" className="hover:text-violet-600 hover:underline">MCA</a></li>
-              <li><a href="#" className="hover:text-violet-600 hover:underline">Bookkeeping</a></li>
-              <li><a href="#" className="hover:text-violet-600 hover:underline">Tax and Accounting</a></li>
+              <li><a href="#" className="hover:text-sky-500 hover:underline">Invoice</a></li>
+              <li><a href="#" className="hover:text-sky-500 hover:underline">MCA</a></li>
+              <li><a href="#" className="hover:text-sky-500 hover:underline">Bookkeeping</a></li>
+              <li><a href="#" className="hover:text-sky-500 hover:underline">Tax and Accounting</a></li>
             </ul>
           </div>
 
           {/* Column 3: Legal */}
           <div>
-            <h3 className="text-lg font-semibold text-violet-600 mb-4">Legal</h3>
+            <h3 className="text-lg font-semibold bg-gradient-to-b from-sky-400 to-blue-500 bg-clip-text text-transparent  mb-4">Legal</h3>
             <ul className="space-y-3 text-gray-600">
-              <li><a href="#" className="hover:text-violet-600 hover:underline">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-violet-600 hover:underline">Terms & Conditions</a></li>
-              <li><a href="#" className="hover:text-violet-600 hover:underline">Shipping & Delivery</a></li>
-              <li><a href="#" className="hover:text-violet-600 hover:underline">Cancellation & Refund</a></li>
+              <li><a href="#" className="hover:text-sky-500 hover:underline">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-sky-500 hover:underline">Terms & Conditions</a></li>
+              <li><a href="#" className="hover:text-sky-500 hover:underline">Shipping & Delivery</a></li>
+              <li><a href="#" className="hover:text-sky-500 hover:underline">Cancellation & Refund</a></li>
             </ul>
           </div>
 
           {/* Column 4: Contact */}
           <div>
-            <h3 className="text-lg font-semibold text-violet-600 mb-4">Contact</h3>
+            <h3 className="text-lg font-semibold bg-gradient-to-b from-sky-400 to-blue-500 bg-clip-text text-transparent  mb-4">Contact</h3>
             <ul className="space-y-4 text-gray-600">
               <li className="flex items-start justify-center md:justify-start gap-3">
-                <Mail className="w-5 h-5 text-violet-500 mt-1 flex-shrink-0" />
-                <a href="mailto:hi@teklume.com" className="hover:text-violet-600 hover:underline">abc@gmail.com</a>
+                <Mail className="w-5 h-5 text-sky-500 mt-1 flex-shrink-0" />
+                <a href="mailto:hi@teklume.com" className="hover:text-sky-500 hover:underline">abc@gmail.com</a>
               </li>
               <li className="flex items-start justify-center md:justify-start gap-3">
-                <Phone className="w-5 h-5 text-violet-500 mt-1 flex-shrink-0" />
-                <a href="tel:+918985350865" className="hover:text-violet-600 hover:underline">+91 888XXXXXXX</a>
+                <Phone className="w-5 h-5 text-sky-500 mt-1 flex-shrink-0" />
+                <a href="tel:+918985350865" className="hover:text-sky-500 hover:underline">+91 888XXXXXXX</a>
               </li>
               <li className="flex items-start justify-center md:justify-start gap-3">
-                <MapPin className="w-5 h-5 text-violet-500 mt-1 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-sky-500 mt-1 flex-shrink-0" />
                 <span>Sector-56<br />New Delhi India</span>
               </li>
             </ul>

@@ -1,23 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Calculator, Shield, Clock, TrendingUp, Users, Award, CheckCircle, ArrowRight, Sparkles, Star } from 'lucide-react'
+import { Calculator, Shield, Clock, TrendingUp, Users, Award, CheckCircle, ArrowRight} from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function Component() {
-  // const [isVisible, setIsVisible] = useState(false)
-  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-
-  // useEffect(() => {
-  //   setIsVisible(true)
-    
-  //   const handleMouseMove = (e: MouseEvent) => {
-  //     setMousePosition({ x: e.clientX, y: e.clientY })
-  //   }
-    
-  //   window.addEventListener('mousemove', handleMouseMove)
-  //   return () => window.removeEventListener('mousemove', handleMouseMove)
-  // }, [])
+  
 
   const features = [
     {
@@ -93,9 +81,7 @@ export default function Component() {
           className="text-center mb-20"
         >
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-sky-100/80 to-cyan-100/80 border-2 border-sky-200/50 text-sky-700 px-6 py-3 rounded-full text-sm font-semibold mb-8 backdrop-blur-sm shadow-lg">
-            <Star className="w-4 h-4 text-sky-600" />
             Trusted by 10,000+ Businesses
-            <Sparkles className="w-4 h-4 text-sky-600" />
           </div>
           
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-800 mb-8 leading-tight ">
@@ -130,11 +116,11 @@ export default function Component() {
               <div className="relative">
                 {/* Glow Effect */}
                 
-                <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8  hover:shadow-2xl transition-all duration-500 border-2 border-gray-200/50 overflow-hidden group-hover:border-sky-200/70">
+                <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8  hover:shadow-md transition-all duration-500 border-2 border-gray-200/50 overflow-hidden group-hover:border-sky-200/70">
                   {/* Icon */}
                   <stat.icon className="w-10 h-10 text-sky-400 mx-auto mb-4 group-hover:scale-110 group-hover:text-sky-600 transition-all duration-300" />
                   
-                  <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-sky-400 to-blue-400 bg-clip-text text-transparent mb-2">
+                  <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent mb-2">
                     {stat.number}
                   </div>
                   

@@ -1,9 +1,10 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Clock, MessageSquare, Phone, Zap } from "lucide-react";
+import { Clock, Phone, Zap } from "lucide-react";
 import React from "react";
 import { motion } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Cta() {
   return (
@@ -38,21 +39,21 @@ export default function Cta() {
                 {/* Book a Call Button */}
                 <Button
                   variant="outline"
-                  className="text-base sm:text-lg border-2 border-white bg-white font-semibold py-4 sm:py-5 px-6 sm:px-10 rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2 w-full sm:w-auto justify-center"
+                  className="text-base sm:text-lg border-2 border-white bg-white font-semibold py-4 sm:py-5 px-6 sm:px-10 rounded-xl transition-all duration-300  cursor-pointer transform hover:scale-105 inline-flex items-center gap-2 w-full sm:w-auto justify-center"
                 >
                   <span className="text-sky-500">
                     <Phone className="w-5 h-5" />
                   </span>
-                  <span className="bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r font-bold from-sky-400 to-blue-500 bg-clip-text text-transparent">
                     Book a Call
                   </span>
                 </Button>
 
                 {/* WhatsApp Chat Button */}
                 <Button
-                  className="text-base sm:text-lg border-2 border-white text-white bg-gradient-to-r from-sky-400 to-blue-500 font-semibold py-4 sm:py-5 px-6 sm:px-10 rounded-xl inline-flex items-center gap-2 w-full sm:w-auto justify-center"
+                  className="text-base sm:text-lg font-bold border-2 border-white text-white bg-gradient-to-r from-sky-400 to-blue-500   h-10 py-4 sm:py-5 cursor-pointer hover:scale-105 px-6 sm:px-10 rounded-xl inline-flex items-center gap-2 w-full sm:w-auto justify-center"
                 >
-                  <MessageSquare className="w-5 h-5" />
+              <FaWhatsapp className="text-white text-4xl" />
                   <span>WhatsApp Chat</span>
                 </Button>
               </div>

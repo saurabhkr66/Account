@@ -4,7 +4,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Card } from "@/components/ui/card"
-import { ChevronDown, ChevronUp, Star, Sparkles, HelpCircle } from "lucide-react"
+import { ChevronDown, ChevronUp,HelpCircle } from "lucide-react"
 import Link from "next/link"
 const faqs = [
   {
@@ -52,9 +52,7 @@ export default function FaqSection() {
           <div className="space-y-8">
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-cyan-100/80 to-cyan-100/80 border-2 border-cyan-200/50 backdrop-blur-sm rounded-full mb-6">
-                <Star className="w-4 h-4 text-cyan-600" />
                 <span className="text-cyan-700 font-semibold">FAQ</span>
-                <Sparkles className="w-4 h-4 text-cyan-600" />
               </div>
               
               <h2 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6">
@@ -74,8 +72,8 @@ export default function FaqSection() {
             <div className="relative">
               <div className="bg-gradient-to-br from-cyan-100 to-blue-200 rounded-2xl p-8 lg:p-12">
                 {/* You can replace this with an actual image */}
-                <div className="bg-white/50 backdrop-blur-sm rounded-xl p-8 text-center">
-                  <div className="w-24 h-24 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <div className="backdrop-blur-sm rounded-xl p-8 text-center">
+                  <div className="w-24 h-24 bg-gradient-to-r from-sky-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <HelpCircle className="w-12 h-12 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">
@@ -87,7 +85,7 @@ export default function FaqSection() {
                   <Link href="#contact" className="text-blue-600 cursor-pointer hover:underline">
                   <button 
                  
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600  cursor-pointer text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all">
+                  className="bg-gradient-to-r from-sky-400 to-blue-500  cursor-pointer text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all">
                     Contact Us
                   </button>
                   </Link>
@@ -105,10 +103,10 @@ export default function FaqSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="bg-white/80 backdrop-blur-sm border-2 border-gray-200/50 shadow hover:shadow-md transition-all">
+                <Card className="bg-white/80 backdrop-blur-sm border-2  border-gray-200/50 shadow hover:shadow-md transition-all">
                   <button
                     onClick={() => toggleFaq(index)}
-                    className="w-full px-6 py-1  flex justify-between items-center text-left hover:bg-emerald-50/30"
+                    className="w-full px-6 py-1  flex justify-between  cursor-pointer items-center text-left hover:bg-emerald-50/30"
                   >
                     <span className="text-lg font-medium text-gray-800 pr-4">
                       {faq.question}

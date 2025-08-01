@@ -3,8 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, Star, Sparkles, Award } from "lucide-react"
+import { Star } from "lucide-react"
 
 const testimonials = [
   {
@@ -81,14 +80,7 @@ export default function Testimonial() {
     }, 400)
   }
 
-  const handlePrev = () => {
-    if (isAnimating) return
-    setIsAnimating(true)
-    setTimeout(() => {
-      setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-      setIsAnimating(false)
-    }, 400)
-  }
+  
 
   const currentTestimonial = testimonials[currentIndex]
 
@@ -126,9 +118,7 @@ export default function Testimonial() {
         >
           {/* Enhanced Badge */}
           <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-sky-100/80 to-indigo-100/80 border-2 border-sky-200/50 backdrop-blur-sm rounded-full mb-10">
-            <Award className="w-5 h-5 text-sky-600" />
             <span className="text-sky-700 font-semibold text-lg">Client Testimonials</span>
-            <Sparkles className="w-5 h-5 text-indigo-600" />
           </div>
 
           {/* Enhanced Main Heading */}
@@ -149,26 +139,7 @@ export default function Testimonial() {
 
         {/* Enhanced Testimonial Card */}
         <div className="relative">
-          {/* Enhanced Navigation Arrows */}
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={handlePrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 h-14 w-14 rounded-full bg-white/80 backdrop-blur-sm border-2 border-gray-200/50 hover:bg-white/90 hover:border-sky-200/70 shadow-lg group transition-all duration-300"
-          >
-            <ChevronLeft className="h-6 w-6 text-gray-600 group-hover:text-sky-600 transition-colors duration-300" />
-          </Button>
-
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={handleNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 h-14 w-14 rounded-full bg-white/80 backdrop-blur-sm border-2 border-gray-200/50 hover:bg-white/90 hover:border-sky-200/70 shadow-lg group transition-all duration-300"
-          >
-            <ChevronRight className="h-6 w-6 text-gray-600 group-hover:text-sky-600 transition-colors duration-300" />
-          </Button>
-
-          {/* Enhanced Main Testimonial Card */}
+         
           <div className="max-w-7xl mx-auto">
             <AnimatePresence mode="wait">
               <motion.div

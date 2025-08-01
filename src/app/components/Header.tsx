@@ -60,7 +60,7 @@ export default function Header() {
   const styles = {
     text: inHomeSection ? 'text-white' : 'text-black',
     bg: 'bg-transparent border-white/10',
-    shadow: 'shadow-md',
+    shadow: '',
   };
 
   const navItems = [
@@ -107,7 +107,7 @@ export default function Header() {
           ))}
           <button
             onClick={() => scrollToSection('contact')}
-            className="ml-4 bg-gradient-to-r from-sky-400 to-blue-500 text-white rounded-lg px-4 py-2 font-semibold shadow hover:scale-105 transition"
+            className="ml-4 bg-gradient-to-r from-sky-400 to-blue-500 text-white rounded-lg px-4 py-2 font-semibold hover:scale-105 transition"
           >
             Contact Us
           </button>
@@ -125,7 +125,7 @@ export default function Header() {
 
       {/* Mobile Menu Dropdown */}
       {menuOpen && (
-        <div className={`md:hidden mt-2 backdrop-blur-lg bg-white/90 dark:bg-black/80 rounded-xl mx-4 p-6 shadow-lg border ${inHomeSection ? 'text-black' : 'text-black'}`}>
+        <div className={`md:hidden mt-2 backdrop-blur-lg bg-white/90 dark:bg-black/80 rounded-xl mx-4 p-6 border ${inHomeSection ? 'text-black' : 'text-black'}`}>
           <nav className="flex flex-col space-y-4">
             {navItems.map(([id, label]) => (
               <button
@@ -140,7 +140,7 @@ export default function Header() {
             ))}
             <button
               onClick={() => scrollToSection('contact')}
-              className="bg-gradient-to-r from-sky-400 to-blue-500 text-white rounded-lg px-4 py-2 font-semibold shadow hover:scale-105 transition"
+              className="bg-gradient-to-r from-sky-400 to-blue-500 text-white rounded-lg px-4 py-2 font-semibold  hover:scale-105 transition"
             >
               Contact Us
             </button>

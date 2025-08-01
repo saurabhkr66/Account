@@ -65,7 +65,7 @@ const ContactInfo = () => {
               <point.icon className="w-7 h-7" />
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-sky-500">{point.title}</h3>
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">{point.title}</h3>
               <p className="text-gray-600 text-xl mt-1">{point.details}</p>
             </div>
           </div>
@@ -115,13 +115,13 @@ Ready to transform your business? Let&apos;s start the conversation.
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-<div className="bg-gradient-to-r from-[#211F36] to-[#4a2a58] rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+<div className="bg-sky-50 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
               <div className="relative z-10">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
                   Transform Your Business with 
-                  <span className="bg-gradient-to-r from-sky-300 to-blue-300 bg-clip-text text-transparent"> Expert Care</span>
+                  <span className="bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent"> Expert Care</span>
                 </h2>
-                <p className="text-violet-100 mb-8 text-lg">
+                <p className="text-black mb-8 text-lg">
                   Join thousands of business owners who trust us to manage their finances and drive growth.
                 </p>
 
@@ -197,12 +197,12 @@ Ready to transform your business? Let&apos;s start the conversation.
                     transition={{ duration: 0.3, delay: 0.5 }}
                   >
                     <div className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-sky-400" />
-                      <span className="text-sm">Free consultation</span>
+                      <CheckCircle className="w-4 h-4 text-sky-800" />
+                      <span className="text-sm text-black">Free consultation</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-sky-400" />
-                      <span className="text-sm">No commitment</span>
+                      <CheckCircle className="w-4 h-4 text-sky-800" />
+                      <span className="text-sm text-black">No commitment</span>
                     </div>
                   </motion.div>
                 </form>
