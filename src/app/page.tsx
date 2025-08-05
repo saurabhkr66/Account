@@ -9,6 +9,7 @@ import WhoWeServe from './components/howItWork';
 import ContactUs from './components/Contact';
 import ServicesSection from './components/Services2';
 import Technology from './components/technology';
+import PricingSection from './components/pricing';
 
 const Index = () => {
   return (
@@ -43,6 +44,7 @@ const Index = () => {
         <section id="contact"> {/* ✅ fixed from 'Contact' */}
           <ContactUs />
         </section>
+        <PricingSection/>
 
         <section id="cta">
           <Cta />
