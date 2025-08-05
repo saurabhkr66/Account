@@ -50,7 +50,7 @@ export default function Technology() {
 
         {/* Animated Feature Cards Grid */}
         <motion.div
-          className="w-full max-w-[960px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 px-2 sm:px-0 mx-auto"
+          className="w-[960px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8  mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
