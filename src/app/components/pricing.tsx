@@ -1,7 +1,7 @@
 "use client"
 
-import { Check, ArrowRight } from "lucide-react"
-import React from "react"
+import { Check, ArrowRight, ChevronDown, ChevronUp } from "lucide-react"
+import React, { useState } from "react"
 import { useId } from "react"
 
 // Mock Button component
@@ -13,6 +13,8 @@ const Button = ({ children, className, ...props }) => (
 
 export default function PricingSection() {
   const idPrefix = useId()
+  const [activeTab, setActiveTab] = useState("growth") // Default to growth (highlighted plan)
+  const [showFeatures, setShowFeatures] = useState(false)
 
   const features = [
     { name: "Bookkeeping Frequency", essentials: "Monthly", growth: "Weekly", advanced: "Daily" },
@@ -77,84 +79,194 @@ export default function PricingSection() {
     )
   }
 
+  const activeplan = plans.find(plan => plan.key === activeTab)
+
   return (
-    <div className="bg-white py-16">
+    <div className="bg-white py-8 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-slate-800">
+        <div className="text-center mb-8 md:mb-12">
+          <h1 className="text-2xl md:text-4xl font-bold text-slate-800">
             Choose the Bookkeeping Package that Suits You the Best
           </h1>
         </div>
 
-        {/* Scrollable Table */}
-        <div className="overflow-auto rounded-xl border border-gray-200 shadow-sm">
-          <div className="min-w-[900px] grid grid-cols-[1fr_repeat(3,minmax(200px,1fr))]">
-            {/* Header Row */}
-            <div className="bg-white p-6">
-              <h2 className="text-xl font-semibold text-slate-800">CORE FEATURES</h2>
-            </div>
+        {/* Mobile View */}
+        <div className="md:hidden">
+          {/* Tab Navigation */}
+          <div className="flex bg-gray-100 rounded-lg p-1 mb-6">
             {plans.map((plan) => (
-              <div
-                key={plan.name}
-                className={`p-6 text-center relative ${plan.highlight ? "bg-sky-50" : "bg-white"}`}
-              >
-                {plan.highlight && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2  translate-y-3 z-10">
-                    {/* <div className="bg-gradient-to-r from-sky-400 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">
-                      MOST POPULAR
-                    </div> */}
-                  </div>
-                )}
-                <h3 className="text-lg font-bold text-slate-700">{plan.name}</h3>
-              </div>
-            ))}
-
-            {/* Feature Rows */}
-            {features.map((feature, rowIndex) => (
-              <React.Fragment key={`${idPrefix}-${feature.name}`}>
-                <div className="bg-white p-4 flex items-center border-t border-gray-200">
-                  <p className="text-sm text-slate-700 font-medium">{feature.name}</p>
-                </div>
-                {plans.map((plan) => (
-                  <div
-                    key={`${idPrefix}-${feature.name}-${plan.key}`}
-                    className={`p-4 flex justify-center items-center border-t border-gray-200 ${
-                      plan.highlight ? "bg-sky-50" : "bg-white"
-                    }`}
-                  >
-                    <FeatureValue value={feature[plan.key]} highlight={plan.highlight} />
-                  </div>
-                ))}
-              </React.Fragment>
-            ))}
-
-            {/* Buttons */}
-            <div className="bg-white p-6 border-t border-gray-200"></div>
-            {plans.map((plan) => (
-              <div
-                key={`${plan.key}-btn`}
-                className={`p-6 border-t border-gray-200 flex justify-center items-center ${
-                  plan.highlight ? "bg-sky-50" : "bg-white"
+              <button
+                key={plan.key}
+                onClick={() => setActiveTab(plan.key)}
+                className={`flex-1 py-2 px-3 text-sm font-medium rounded-md transition-all duration-200 ${
+                  activeTab === plan.key
+                    ? plan.highlight
+                      ? "bg-gradient-to-r from-sky-400 to-blue-500 text-white shadow-md"
+                      : "bg-white text-slate-800 shadow-md"
+                    : "text-slate-600 hover:text-slate-800"
                 }`}
               >
-                <Button
-                  className={`w-full group inline-flex items-center justify-center text-white transition-all duration-300 ${
-                    plan.highlight
-                      ? "bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 shadow-lg"
-                      : "bg-slate-700 hover:bg-slate-800"
-                  } px-4 py-2 rounded-md text-sm font-medium`}
-                >
-                  {plan.buttonText}
-                  <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </div>
+                {plan.name}
+              </button>
             ))}
+          </div>
+
+          {/* Active Plan Content */}
+          <div className="mb-6">
+            <div
+              className={`rounded-xl border p-6 ${
+                activeplan.highlight 
+                  ? "bg-sky-50 border-sky-200" 
+                  : "bg-white border-gray-200"
+              }`}
+            >
+              {activeplan.highlight && (
+                <div className="text-center mb-4">
+                  <span className="bg-gradient-to-r from-sky-400 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">
+                    MOST POPULAR
+                  </span>
+                </div>
+              )}
+              
+              <h2 className="text-2xl font-bold text-slate-700 text-center mb-6">
+                {activeplan.name}
+              </h2>
+
+              {/* Plan Features */}
+              <div className="space-y-4 mb-6">
+                {features.map((feature) => (
+                  <div
+                    key={`mobile-${feature.name}`}
+                    className="flex justify-between items-center py-3 border-b border-gray-200 last:border-b-0"
+                  >
+                    <span className="text-sm font-medium text-slate-700 flex-1">
+                      {feature.name}
+                    </span>
+                    <div className="ml-4">
+                      <FeatureValue 
+                        value={feature[activeTab]} 
+                        highlight={activeplan.highlight} 
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Plan Button */}
+              <Button
+                className={`w-full group inline-flex items-center justify-center text-white transition-all duration-300 ${
+                  activeplan.highlight
+                    ? "bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 shadow-lg"
+                    : "bg-slate-700 hover:bg-slate-800"
+                } px-4 py-3 rounded-md font-medium`}
+              >
+                {activeplan.buttonText}
+                <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
+          </div>
+
+          {/* Core Features Toggle Button */}
+          
+
+          {/* All Features Comparison */}
+          {/* {showFeatures && (
+            <div className="space-y-4 animate-in slide-in-from-top duration-300">
+              {features.map((feature) => (
+                <div
+                  key={`compare-${feature.name}`}
+                  className="bg-white rounded-lg border border-gray-200 p-4 shadow-sm"
+                >
+                  <h4 className="font-medium text-slate-700 mb-3 text-sm">
+                    {feature.name}
+                  </h4>
+                  <div className="grid grid-cols-3 gap-4">
+                    {plans.map((plan) => (
+                      <div key={`compare-${feature.name}-${plan.key}`} className="text-center">
+                        <div className="text-xs font-semibold text-slate-500 mb-2 uppercase">
+                          {plan.name}
+                        </div>
+                        <FeatureValue value={feature[plan.key]} highlight={plan.highlight} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )} */}
+        </div>
+
+        {/* Desktop View - Original Table */}
+        <div className="hidden md:block">
+          <div className="overflow-auto rounded-xl border border-gray-200 shadow-sm">
+            <div className="min-w-[900px] grid grid-cols-[1fr_repeat(3,minmax(200px,1fr))]">
+              {/* Header Row */}
+              <div className="bg-white p-6">
+                <h2 className="text-xl font-semibold text-slate-800">CORE FEATURES</h2>
+              </div>
+              {plans.map((plan) => (
+                <div
+                  key={plan.name}
+                  className={`p-6 text-center relative ${plan.highlight ? "bg-sky-50" : "bg-white"}`}
+                >
+                  {plan.highlight && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 translate-y-3 z-10">
+                      {/* <div className="bg-gradient-to-r from-sky-400 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">
+                        MOST POPULAR
+                      </div> */}
+                    </div>
+                  )}
+                  <h3 className="text-lg font-bold text-slate-700">{plan.name}</h3>
+                </div>
+              ))}
+
+              {/* Feature Rows */}
+              {features.map((feature) => (
+                <React.Fragment key={`${idPrefix}-${feature.name}`}>
+                  <div className="bg-white p-4 flex items-center border-t border-gray-200">
+                    <p className="text-sm text-slate-700 font-medium">{feature.name}</p>
+                  </div>
+                  {plans.map((plan) => (
+                    <div
+                      key={`${idPrefix}-${feature.name}-${plan.key}`}
+                      className={`p-4 flex justify-center items-center border-t border-gray-200 ${
+                        plan.highlight ? "bg-sky-50" : "bg-white"
+                      }`}
+                    >
+                      <FeatureValue value={feature[plan.key]} highlight={plan.highlight} />
+                    </div>
+                  ))}
+                </React.Fragment>
+              ))}
+
+              {/* Buttons */}
+              <div className="bg-white p-6 border-t border-gray-200"></div>
+              {plans.map((plan) => (
+                <div
+                  key={`${plan.key}-btn`}
+                  className={`p-6 border-t border-gray-200 flex justify-center items-center ${
+                    plan.highlight ? "bg-sky-50" : "bg-white"
+                  }`}
+                >
+                  <Button
+                    className={`w-full group inline-flex items-center justify-center text-white transition-all duration-300 ${
+                      plan.highlight
+                        ? "bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 shadow-lg"
+                        : "bg-slate-700 hover:bg-slate-800"
+                    } px-4 py-2 rounded-md text-sm font-medium`}
+                  >
+                    {plan.buttonText}
+                    <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Chat with Us Button */}
         <div className="fixed bottom-6 right-6">
-          <Button className="bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-white rounded-full px-6 py-3 shadow-lg flex items-center">
+          <Button className="bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-white rounded-full px-4 md:px-6 py-3 shadow-lg flex items-center text-sm md:text-base">
             Chat with Us
           </Button>
         </div>
