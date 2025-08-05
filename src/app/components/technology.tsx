@@ -59,10 +59,10 @@ export default function Technology() {
           {FEATURES.map((feature) => (
             <motion.div
               key={feature.name}
-              className="bg-white dark:bg-gray-800/40 p-6 rounded-xl shadow-sm flex flex-col items-center justify-start gap-5 border border-gray-200 dark:border-gray-700"
+              className="bg-white dark:bg-gray-800/40 p-6 rounded-xl  flex flex-col items-center justify-start gap-5 border border-gray-200 dark:border-gray-700"
            
               whileHover={{ scale: 1.05, y: -8, boxShadow: "0px 10px 20px rgba(0,0,0,0.1)"}}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.6 }}
             >
               <div className="flex-grow flex items-center justify-center">
                    <Image src={feature.logo} alt={feature.name} width={70} height={70} style={{objectFit: "contain"}} />
