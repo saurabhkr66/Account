@@ -4,6 +4,8 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Star } from "lucide-react"
+  import { useCallback } from "react"
+
 
 const testimonials = [
   {
@@ -62,6 +64,16 @@ export default function Testimonial() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
 
+
+  const handleNext = useCallback(() => {
+    if (isAnimating) return
+    setIsAnimating(true)
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+      setIsAnimating(false)
+    }, 400)
+  }, [isAnimating])
+
   // Auto-rotate testimonials
   useEffect(() => {
     const interval = setInterval(() => {
@@ -69,16 +81,7 @@ export default function Testimonial() {
     }, 8000)
 
     return () => clearInterval(interval)
-  }, [currentIndex])
-
-  const handleNext = () => {
-    if (isAnimating) return
-    setIsAnimating(true)
-    setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-      setIsAnimating(false)
-    }, 400)
-  }
+  }, [currentIndex, handleNext])
 
   
 
